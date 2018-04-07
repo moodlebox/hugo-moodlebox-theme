@@ -36,7 +36,7 @@ $(function() {
       var submitButton = $('input[type=submit]', $form);
       $.ajax({
         type: 'POST',
-        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        crossDomain: false,
 //         url: $form.prop('action'),
 //         accept: {
 //           javascript: 'application/javascript'
