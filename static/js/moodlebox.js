@@ -45,6 +45,8 @@ $(function() {
           if ( $('#_email', $form).val() ) {
             xhr.abort();
           } else {
+            // Set real action URL
+            $form.attr('action', 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/');
             submitButton.prop('value', 'Please Wait...');
             submitButton.prop('disabled', 'disabled');
           }
@@ -52,7 +54,6 @@ $(function() {
       }).done(function(data) {
         submitButton.prop('value', 'Thank you, we\x27ll get back to you shortly.');
         submitButton.prop('disabled', false);
-        // hj('formSubmitSuccessful');
       });
     },
     filter: function() {
