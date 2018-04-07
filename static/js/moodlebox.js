@@ -36,10 +36,10 @@ $(function() {
       var submitButton = $('input[type=submit]', $form);
       $.ajax({
         type: 'POST',
-        url: $form.prop('action'),
-        accept: {
-          javascript: 'application/javascript'
-        },
+//         url: $form.prop('action'),
+//         accept: {
+//           javascript: 'application/javascript'
+//         },
         data: $form.serialize(),
         beforeSend: function(xhr, opts) {
           if ( $('#_email', $form).val() ) {
