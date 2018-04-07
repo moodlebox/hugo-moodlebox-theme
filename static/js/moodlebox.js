@@ -36,8 +36,8 @@ $(function() {
       var submitButton = $('input[type=submit]', $form);
       $.ajax({
         type: 'POST',
-        crossDomain: false,
-//         url: $form.prop('action'),
+        // Set real action URL
+        url: 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/',
 //         accept: {
 //           javascript: 'application/javascript'
 //         },
@@ -46,8 +46,6 @@ $(function() {
           if ( $('#_email', $form).val() ) {
             xhr.abort();
           } else {
-            // Set real action URL
-            opts.url = 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/';
             submitButton.prop('value', 'Please Wait...');
             submitButton.prop('disabled', 'disabled');
           }
