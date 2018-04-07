@@ -36,6 +36,7 @@ $(function() {
       var submitButton = $('input[type=submit]', $form);
       $.ajax({
         type: 'POST',
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
 //         url: $form.prop('action'),
 //         accept: {
 //           javascript: 'application/javascript'
@@ -46,7 +47,6 @@ $(function() {
             xhr.abort();
           } else {
             // Set real action URL
-            // $form.attr('action', 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/');
             opts.url = 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/';
             submitButton.prop('value', 'Please Wait...');
             submitButton.prop('disabled', 'disabled');
