@@ -47,7 +47,7 @@ $(function() {
           } else {
             // Set real action URL
             // $form.attr('action', 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/');
-            settings.url = 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/';
+            opts.url = 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/';
             submitButton.prop('value', 'Please Wait...');
             submitButton.prop('disabled', 'disabled');
           }
