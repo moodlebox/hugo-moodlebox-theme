@@ -1,7 +1,7 @@
 <script type="application/ld+json">
 {
   "@context": "http://schema.org/",
-  "@type": "Article",
+  "@type": "WebPage",
   "mainEntityOfPage": {
     "@type": "WebSite",
     "@id": "{{ "/" | absLangURL }}",
@@ -26,6 +26,10 @@
   "inLanguage" : "{{ .Language }}",
   "author" : "{{ .Site.Params.Author }}",
   "creator" : "{{ .Site.Params.Author }}",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "MoodleBox"
+  }
   "accountablePerson" : "{{ .Site.Params.Author }}",
   "copyrightHolder" : "{{ .Site.Params.Author }}",
   "copyrightYear" : "{{ .Date.Format "2006" }}",
