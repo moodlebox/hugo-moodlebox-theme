@@ -8,7 +8,7 @@
     "sameAs": [
       "https://twitter.com/moodlebox",
       "https://github.com/moodlebox"
-    ],
+    ]
   },
   "@id": "{{ .Permalink }}",
   "url": "{{ .Permalink }}",
@@ -31,9 +31,9 @@
   "dateModified" : "{{ .Date.Format "2006-01-02" }}",
   "wordCount" : "{{ .WordCount }}",
   {{ if .Keywords -}}
-  "keywords" : "{{ delimit .Keywords ", " }}",
+  "keywords" : "{{ delimit .Keywords ", " }}"
   {{- else if .Site.Params.DefaultKeywords -}}
-  "keywords" : "{{ delimit .Site.Params.DefaultKeywords ", " }}",
+  "keywords" : "{{ delimit .Site.Params.DefaultKeywords ", " }}"
   {{- end }}
 }
 </script>
