@@ -3,8 +3,9 @@
   "@context": "http://schema.org/",
   "@type": "Article",
   "mainEntityOfPage": {
-    "@type": "WebPage",
+    "@type": "WebSite",
     "@id": "{{ "/" | absLangURL }}",
+    "url": "{{ "/" | absLangURL }}",
     "sameAs": [
       "https://twitter.com/moodlebox",
       "https://github.com/moodlebox"
@@ -21,9 +22,10 @@
   {{- else -}}
   "description": "{{ .Site.Params.DefaultDescription }}",
   {{- end }}
+  "image" : "{{ .Site.Params.logo | absURL }}",
   "inLanguage" : "{{ .Language }}",
+  "author" : "{{ .Site.Params.Author }}",
   "creator" : "{{ .Site.Params.Author }}",
-  "publisher" : "{{ .Site.Params.Author }}",
   "accountablePerson" : "{{ .Site.Params.Author }}",
   "copyrightHolder" : "{{ .Site.Params.Author }}",
   "copyrightYear" : "{{ .Date.Format "2006" }}",
