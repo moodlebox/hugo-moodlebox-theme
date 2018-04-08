@@ -1,0 +1,39 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ "/" | absLangURL }}",
+    "sameAs": [
+      "https://twitter.com/moodlebox",
+      "https://github.com/moodlebox"
+    ],
+  },
+  "@id": "{{ .Permalink }}",
+  "url": "{{ .Permalink }}",
+  "name" : "{{ .Title }}",
+  "headline" : "{{ .Title }}",
+  {{ if .Description -}}
+  "description": "{{ .Description }}",
+  {{- else if .Site.Params.Description -}}
+  "description": "{{ .Site.Params.Description }}",
+  {{- else -}}
+  "description": "{{ .Site.Params.DefaultDescription }}",
+  {{- end }}
+  "inLanguage" : "{{ .Language }}",
+  "creator" : "{{ .Site.Params.Author }}",
+  "publisher" : "{{ .Site.Params.Author }}",
+  "accountablePerson" : "{{ .Site.Params.Author }}",
+  "copyrightHolder" : "{{ .Site.Params.Author }}",
+  "copyrightYear" : "{{ .Date.Format "2006" }}",
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified" : "{{ .Date.Format "2006-01-02" }}",
+  "wordCount" : "{{ .WordCount }}",
+  {{ if .Keywords -}}
+  "keywords" : "{{ delimit .Keywords ", " }}",
+  {{- else if .Site.Params.DefaultKeywords -}}
+  "keywords" : "{{ delimit .Site.Params.DefaultKeywords ", " }}",
+  {{- end }}
+}
+</script>
