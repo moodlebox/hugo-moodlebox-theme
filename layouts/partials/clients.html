@@ -9,8 +9,8 @@
                     <h2>{{ .Site.Params.clients.title }}</h2>
                 </div>
 
-                <p class="lead">
-                  {{ .Site.Params.clients.subtitle }}
+                <p class="lead text-center">
+                  {{ .Site.Params.clients.subtitle | markdownify }}
                 </p>
 
                 <ul class="owl-carousel customers">
