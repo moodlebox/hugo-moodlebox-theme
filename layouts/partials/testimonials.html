@@ -2,11 +2,6 @@
 {{ if .Site.Params.testimonials.enable }}
 {{ $testimonials := index .Site.Data.testimonials .Site.Language.Lang }}
 {{ if gt ($testimonials) 0 }}
-{{/*
-{{ range (index .Site.Data.testimonials .Site.Language.Lang) }}
-  {{ printf "%+v" . }}
-{{end}}
-*/}}
 <section class="bar background-pentagon no-mb">
     <div class="container">
         <div class="row">
