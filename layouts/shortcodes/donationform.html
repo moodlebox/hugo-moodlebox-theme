@@ -1,5 +1,5 @@
-{{ if (index .Site.Data.donation .Site.Language.Lang) }}
-{{ $products := (index .Site.Data.donation .Site.Language.Lang).amounts }}
+{{ with index .Site.Data.donation .Site.Language.Lang }}
+{{ $products := .amounts }}
 {{ range $products }}
   {{ if .default }}
     {{ $.Scratch.Set "amount" .price }}
