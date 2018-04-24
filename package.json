@@ -1,0 +1,22 @@
+{
+  "name": "hugo-moodlebox-theme",
+  "description": "Hugo theme for MoodleBox website",
+  "repository": "github:moodlebox/hugo-moodlebox-theme",
+  "author": "Nicolas Martignoni",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/moodlebox/hugo-moodlebox-theme/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}

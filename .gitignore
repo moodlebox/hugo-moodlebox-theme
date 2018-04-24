@@ -1,5 +1,9 @@
+# Hugo
+public/
+
 # Node
 node_modules/
+npm-debug.log
 
 # Mac finder files and hidden folders
 *.DS_Store
