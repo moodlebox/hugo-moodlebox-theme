@@ -16,6 +16,9 @@ script:
 #  - cd exampleSite
 #  - hugo
 
+env:
+  - HUGO_RELEASE=0.39
+
 cache:
   directories:
     - node_modules
