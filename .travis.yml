@@ -1,0 +1,25 @@
+sudo: required
+
+language: node_js
+node_js:
+  - "lts/*"
+go:
+  - master
+
+install:
+  - wget https://github.com/gohugoio/hugo/releases/download/v"$HUGO_RELEASE"/hugo_"$HUGO_RELEASE"_Linux-64bit.deb
+  - sudo dpkg -i hugo*.deb
+  - npm install
+
+script:
+  - npm run lint
+#  - cd exampleSite
+#  - hugo
+
+cache:
+  directories:
+    - node_modules
+
+notifications:
+  email:
+    on_success: never
