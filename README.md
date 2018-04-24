@@ -1,5 +1,7 @@
 # Hugo theme for MoodleBox
 
+[![Build Status](https://travis-ci.org/moodlebox/hugo-moodlebox-theme.svg?branch=master)](https://travis-ci.org/moodlebox/hugo-moodlebox-theme/)
+
 A [Hugo][hugo] theme of the [MoodleBox][moodlebox] website, [moodlebox.net][moodlebox].
 
 ## License
