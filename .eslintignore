@@ -1,3 +1,5 @@
 **/*.min.js
 **/owl.*.js
 **/load-photoswipe.js
+**/lunr.*
+**/jqBootstrapValidation.js
