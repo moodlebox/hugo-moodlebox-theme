@@ -44,7 +44,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->` | safeHTML }}
-  <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.6/lunr.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.6/lunr.min.js" integrity="sha384-Zm3qBwG4E3sRnvRCwDGO6EFly+4cm/zH679u9r77LrIHy/djaqv6s2mbSNtFJIDH" crossorigin="anonymous"></script>
   <script src="{{ "js/lunr.stemmer.support.min.js" | absURL }}?v={{ now.Unix }}"></script>
   {{- if not (eq .Site.Language.Lang "en") }}
   <script src="{{ .Site.BaseURL }}js/lunr.{{ .Language | safeJS }}.min.js?v={{ now.Unix }}"></script>
