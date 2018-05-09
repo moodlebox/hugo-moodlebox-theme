@@ -17,7 +17,7 @@ script:
 #  - hugo
 
 env:
-  - HUGO_RELEASE=0.40.2
+  - HUGO_RELEASE=0.40.3
 
 cache:
   directories:
