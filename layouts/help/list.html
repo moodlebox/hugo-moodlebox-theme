@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ .Language }}">
-  {{ partial "head.html" . }}
-<body>
-<div id="all">
+{{ define "main" }}
   <header>
     {{ partial "nav.html" . }}
   </header>
@@ -46,8 +42,4 @@
       </div> <!-- /.row -->
     </div> <!-- /.container -->
   </div> <!-- /#content -->
-  {{ partial "footer.html" . }}
-</div> <!-- /#all -->
-{{ partial "scripts.html" . }}
-</body>
-</html>
+{{ end }}

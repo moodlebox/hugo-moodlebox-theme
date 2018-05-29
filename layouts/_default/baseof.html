@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ with .Language }}{{ . }}{{ else }}en-us{{ end }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <!-- OpenGraph metatags -->
+  {{ template "_internal/opengraph.html" . }}
+  <!-- OpenGraph supplementary metatags -->
+  <meta property="og:image" content="{{ .Site.Params.logo | absURL }}" />
+  <!-- Standard metatags -->
+  <meta name="author" content="{{ .Site.Params.Author }}" />
+  {{ if .Keywords -}}
+  <meta name="keywords" content="{{ delimit .Keywords ", " }}">
+  {{- else if .Site.Params.DefaultKeywords -}}
+  <meta name="keywords" content="{{ delimit .Site.Params.DefaultKeywords ", " }}">
+  {{- end }}
+  {{ if .Description -}}
+  <meta name="description" content="{{ .Description }}">
+  {{- else if .Site.Params.Description -}}
+  <meta name="description" content="{{ .Site.Params.Description }}">
+  {{- else if .Site.Params.DefaultDescription -}}
+  <meta name="description" content="{{ .Site.Params.DefaultDescription }}">
+  {{- end }}
+  <link rel="alternate" href="{{ "/index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
+  {{ partial "hreflang.html" . }}
+  {{ partial "seo-metadata.html" . }}
+  <!-- Bootstrap and Font Awesome css -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Custom fonts for this template -->
+  <link href="{{ "css/font-awesome.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
+  <link href="{{ "css/fonts.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
+  <link href="{{ "css/moodlebox.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{{ "css/custom.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
+  <!-- Animations css  -->
+  <link href="{{ "css/animate.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
+  <!-- Owl carousel css -->
+  <link href="{{ "css/owl.carousel.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
+  <link href="{{ "css/owl.theme.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
+  <!-- Responsivity for older IE -->
+  {{- `<!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->` | safeHTML }}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.6/lunr.min.js" integrity="sha384-Zm3qBwG4E3sRnvRCwDGO6EFly+4cm/zH679u9r77LrIHy/djaqv6s2mbSNtFJIDH" crossorigin="anonymous"></script>
+  <script src="{{ "js/lunr.stemmer.support.min.js" | absURL }}?v={{ now.Unix }}"></script>
+  {{- if not (eq .Site.Language.Lang "en") }}
+  <script src="{{ .Site.BaseURL }}js/lunr.{{ .Language | safeJS }}.min.js?v={{ now.Unix }}"></script>
+  {{ end -}}
+  <!-- Favicon and various touch icons-->
+  <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | absURL }}" sizes="180x180">
+  <link rel="icon" type="image/png" href="{{ "img/favicon-32x32.png" | absURL }}" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ "img/favicon-16x16.png" | absURL }}" sizes="16x16">
+  <link rel="manifest" href="{{ "img/manifest.json" | absURL }}">
+  <link rel="mask-icon" href="{{ "img/safari-pinned-tab.svg" | absURL }}" color="#5bbad5">
+  {{ block "headfiles" . }}
+   <!-- pl;aceholder -->
+  {{ end }}
+</head>
+  <body>
+    <div id="all">
+      {{ block "main" . }}{{ end }}
+      {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+    </div>  <!-- /#all -->
+    {{ block "scripts" . }}{{ partial "scripts.html" . }}{{ end }}
+    {{ block "footerfiles" . }}{{ end }}
+    {{ block "analytics" . }}{{ partial "matomo_analytics.html" . }}{{ end }}
+  </body>
+</html>

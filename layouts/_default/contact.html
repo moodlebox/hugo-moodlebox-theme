@@ -1,0 +1,64 @@
+{{ define "main" }}
+  <header>
+    {{ partial "nav.html" . }}
+  </header>
+  {{ partial "breadcrumbs.html" . }}
+  <div id="content">
+    {{ if isset .Params "id" }}
+      {{ partial .Params.id . }}
+    {{ else }}
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div>
+            {{ .Content }}
+            </div>
+          </div>
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    {{ end }}
+  </div> <!-- /#content -->
+{{ end }}
+{{ define "footerfiles" }}
+  <script src="{{ .Site.BaseURL }}js/jqBootstrapValidation.min.js?v={{ now.Unix }}"></script>
+  <script type="text/javascript">
+  jQuery(document).ready(function (e) {
+    /* Contact form */
+    $(function () {
+      $('#contact').find('input,select,textarea').jqBootstrapValidation({
+        preventSubmit: true,
+        submitError: function ($form, event, errors) {
+        },
+        submitSuccess: function ($form, e) {
+          e.preventDefault()
+          var submitButton = $('input[type=submit]', $form)
+          $.ajax({
+            type: 'POST',
+            // Set real action URL
+            url: 'https://hooks.zapier.com/hooks/catch/2849143/8rav6j/',
+            data: $form.serialize(),
+            beforeSend: function (xhr, opts) {
+              if ($('#_email', $form).val()) {
+                xhr.abort()
+              } else {
+                submitButton.prop('value', 'Please Wait...')
+                submitButton.prop('disabled', 'disabled')
+              }
+            }
+          }).done(function (data) {
+            submitButton.prop('value', 'Thank you, we\x27ll get back to you shortly.')
+            submitButton.prop('disabled', false)
+          })
+        },
+        filter: function () {
+          return $(this).is(':visible')
+        }
+      })
+    })
+  })
+
+  $('#name').focus(function () {
+    $('#success').html('')
+  })
+  </script>
+{{ end }}
