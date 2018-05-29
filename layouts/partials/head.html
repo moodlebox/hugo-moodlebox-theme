@@ -4,10 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Title }}</title>
   <!-- OpenGraph metatags -->
-  <meta property="og:title" content="{{ .Title }}" />
-  <meta property="og:description" content="{{ .Site.Params.description }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="{{ .Permalink }}" />
+  {{ template "_internal/opengraph.html" . }}
+  <!-- OpenGraph supplementary metatags -->
   <meta property="og:image" content="{{ .Site.Params.logo | absURL }}" />
   <!-- Standard metatags -->
   <meta name="author" content="{{ .Site.Params.Author }}" />
