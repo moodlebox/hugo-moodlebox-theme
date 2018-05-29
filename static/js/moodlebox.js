@@ -1,6 +1,6 @@
 /* MoodleBox web site specific Javascript code */
 jQuery(document).ready(function (e) {
-
+//
   /* Make dropdown link work correctly when clicked */
   $('.dropdown-toggle').click(function (e) {
     if ($(document).width() > 750) {
@@ -63,5 +63,5 @@ jQuery(document).ready(function (e) {
       }
     })
   })
-
+//
 })
