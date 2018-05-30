@@ -1,1 +1,1 @@
-<p>{{ i18n "lastUpdated" }} {{ .Page.Lastmod.Format "2" }} {{ default .Page.Lastmod.Month(i18n .Date.Month) }} {{ .Page.Lastmod.Format "2006" }}{{ if eq .Page.Section "help" }} | <a href="{{ "help" | relURL }}">{{ i18n "seeAllDoc" }}</a>{{ end }}</p>
+<p>{{ i18n "lastUpdated" }} {{ .Page.Lastmod.Format "2 January 2006" }}{{ if eq .Page.Section "help" }} | <a href="{{ "help" | relURL }}">{{ i18n "seeAllDoc" }}</a>{{ end }}</p>
