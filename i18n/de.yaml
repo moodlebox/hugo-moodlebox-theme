@@ -96,6 +96,8 @@
   translation: "Info"
 - id: tip
   translation: "Hint"
+- id: seeAllDoc
+  translation: "Schauen Sie die Dokumentation"
 
 - id: January
   translation: "Januar"
