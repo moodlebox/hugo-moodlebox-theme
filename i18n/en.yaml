@@ -96,6 +96,8 @@
   translation: "Info"
 - id: tip
   translation: "Tip"
+- id: lastUpdated
+  translation: "Last updated:"
 - id: seeAllDoc
   translation: "See all documentation"
 
