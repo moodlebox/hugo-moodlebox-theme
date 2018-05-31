@@ -7,7 +7,18 @@
   "bugs": {
     "url": "https://github.com/moodlebox/hugo-moodlebox-theme/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-cli": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-ext-replace": "^0.3.0",
+    "gulp-if": "^2.0.2",
+    "gulp-jsbeautifier": "^2.1.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify": "^3.0.0"
+  },
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-standard": "^6.2.0",

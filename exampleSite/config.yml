@@ -1,0 +1,320 @@
+baseurl: https://example.org
+title: MoodleBox
+theme: hugo-moodlebox-theme
+themesDir: ../..
+languageCode: en-us
+
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage: en
+
+# Renders the default content language in subdir, e.g. /en/. The root directory / will redirect to /en/
+defaultContentLanguageInSubdir: true
+
+# Allow taxonomy term with special characters
+preserveTaxonomyNames: true
+
+languages:
+  en:
+    languageName: English
+    title: MoodleBox
+    description: A cool theme for Hugo
+    about_us: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    footertext: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni).
+    copyright: Copyright © 2018 onwards
+    weight: 1
+    contentDir: content/en
+    # Format dates with Go's time formatting
+    date_format: January 2, 2006
+    menu:
+      main:
+      - identifier: help
+        name: Using MoodleBox
+        weight: 2
+
+      - parent: help
+        name: Knowledge base
+        url: /help/
+        weight: 1
+      - parent: help
+        name: Support MoodleBox
+        url: /give/
+        weight: 2
+      - parent: help
+        name: About MoodleBox
+        url: /about/
+        weight: 3
+      - parent: help
+        name: Contact
+        url: /contact/
+        weight: 4
+
+      - identifier: get
+        name: Get MoodleBox
+        weight: 3
+      - parent: get
+        name: Download the disk image
+        url: /dl/
+        weight: 1
+      - parent: get
+        name: Get the hardware
+        url: /hardware/
+        weight: 2
+      - parent: get
+        name: Install MoodleBox
+        url: /install/
+        weight: 3
+      - parent: get
+        name: Make your own disk image
+        url: /diy/
+        weight: 4
+
+    testimonials:
+      enable: true
+      subtitle: Here are some testimonials
+      title: What people say
+
+    clients:
+      enable: true
+      subtitle: These are some clients
+      title: Our users
+
+  fr:
+    languageName: Français
+    title: MoodleBox
+    description: Un thème sympa pour Hugo
+    about_us: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni).
+    footertext: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    copyright: Copyright © 2018 et suivantes
+    contentDir: content/fr
+    weight: 2
+    # Format dates with Go's time formatting
+    date_format: 2 January 2006
+    menu:
+      main:
+      - identifier: help
+        name: Utiliser la MoodleBox
+        weight: 2
+
+      - parent: help
+        name: Assistance
+        url: /help/
+        weight: 1
+      - parent: help
+        name: Soutenir MoodleBox
+        url: /give/
+        weight: 2
+      - parent: help
+        name: À propos de MoodleBox
+        url: /about/
+        weight: 3
+      - parent: help
+        name: Contact
+        url: /contact/
+        weight: 4
+
+      - identifier: get
+        name: Obtenir la MoodleBox
+        weight: 3
+
+      - parent: get
+        name: Télécharger l'image-disque
+        url: /dl/
+        weight: 1
+      - parent: get
+        name: Obtenir le matériel
+        url: /hardware/
+        weight: 2
+      - parent: get
+        name: Installer MoodleBox
+        url: /install/
+        weight: 3
+      - parent: get
+        name: Créer son image-disque
+        url: /diy/
+        weight: 4
+
+    testimonials:
+      enable: true
+      subtitle: Voici quelques témoignages
+      title: Ce que les gens en disent
+
+    clients:
+      enable: true
+      subtitle: Voici quelques-uns de nos clients
+      title: Nos utilisateurs
+
+  de:
+    languageName: Deutsch
+    title: MoodleBox
+    description: Ein Theme für Hugo
+    about_us: MoodleBox ist ein Theme für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    footertext: MoodleBox ist ein Theme für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    copyright: Copyright © 2018 und später
+    contentDir: content/de
+    weight: 3
+    # Format dates with Go's time formatting
+    date_format: 2. January 2006
+    menu:
+      main:
+      - identifier: help
+        name: MoodleBox benutzen
+        weight: 2
+
+      - parent: help
+        name: Dokumentation
+        url: /help/
+        weight: 1
+      - parent: help
+        name: MoodleBox unterstützen
+        url: /give/
+        weight: 2
+      - parent: help
+        name: Über MoodleBox
+        url: /about/
+        weight: 3
+      - parent: help
+        name: Kontakt
+        url: /contact/
+        weight: 4
+
+      - identifier: get
+        name: MoodleBox erhalten
+        weight: 3
+      - parent: get
+        name: Disk-Image herunterladen
+        url: /dl/
+        weight: 1
+      - parent: get
+        name: Hardware beschaffen
+        url: /hardware/
+        weight: 2
+      - parent: get
+        name: MoodleBox installieren
+        url: /install/
+        weight: 3
+      - parent: get
+        name: Disk-Image selber erstellen
+        url: /diy/
+        weight: 4
+
+    testimonials:
+      enable: true
+      subtitle: Hier sind einige Meinungen von Personen
+      title: Was Leute dazu sagen
+
+    clients:
+      enable: true
+      subtitle: Hier sind einige Kunden
+      title: Unsere Benutzer
+
+menu:
+  topbar:
+  - name: GitHub
+    pre: <i class='fa fa-2x fa-github'></i>
+    url: https://github.com/moodlebox/moodlebox-hugo-theme
+    weight: 1
+#  - name: Facebook
+#    pre: <i class='fa fa-2x fa-facebook'></i>
+#    url: https://facebook.com
+#    weight: 2
+  - name: Twitter
+    pre: <i class='fa fa-2x fa-twitter'></i>
+    url: https://twitter.com
+    weight: 3
+  - name: Email
+    pre: <i class='fa fa-2x fa-envelope'></i>
+    url: mailto:your@email.here
+    weight: 4
+
+params:
+  author: Your Name
+  address: ''
+  defaultDescription: A cool theme for Hugo
+  defaultKeywords:
+  - Hugo
+  - Hugo theme
+  - Theme
+  - Multilingual
+
+  # Since this template is static, the contact form uses www.formspree.io as a
+  # proxy. The form makes a POST request to their servers to send the actual
+  # email. Visitors can send up to a 1000 emails each month for free.
+  #
+  # What you need to do for the setup?
+  #
+  # - set your email address under 'email' below
+  # - upload the generated site to your server
+  # - send a dummy email yourself to confirm your account
+  # - click the confirm link in the email from www.formspree.io
+  # - you're done. Happy mailing!
+  #
+  # Enable the contact form by entering your Formspree.io email
+  email: your@email.here
+
+  logo: img/logo.png
+
+  carousel:
+    enable: true
+
+  news:
+    enable: true
+
+  features:
+    enable: true
+
+  recent_posts:
+    enable: true
+    subtitle: ''
+    title: ''
+
+  see_more:
+    enable: false
+    icon: fa fa-file-code-o
+    link_text: Check other homepages
+    link_url: '#'
+    subtitle: We have prepared for you more than 40 different HTML pages, including
+      5 variations of homepage.
+    title: Do you want to see more?
+
+  topbar:
+    enable: false
+    text: ""
+
+  viewMorePostLink: /help/
+
+  widgets:
+    categories: true
+    search: true
+    tags: true
+    related: true
+    recentnews: true
+
+  # Enable Matomo analytics by entering your tracking server and site id
+  matomoAnalytics:
+    siteid: ""
+    matomoroot: "" # Do not add slashes
+
+related:
+  threshold: 50
+  includeNewer: true
+  toLower: true
+  indices:
+    - name: "keywords"
+      weight: 200
+
+    - name: "categories"
+      weight: 100
+
+    - name: "tags"
+      weight: 50
+
+    - name: "date"
+      weight: 1
+      pattern: "2006"
+
+outputs:
+  home: ["HTML", "JSON", "RSS"]
+  page: ["HTML"]
+
+permalinks:
+  help: /help/:slug
