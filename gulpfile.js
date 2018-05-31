@@ -1,5 +1,5 @@
 var gulp = require('gulp')
-var concat = require('gulp-concat')
+// var concat = require('gulp-concat')
 var minify = require('gulp-clean-css')
 var uglify = require('gulp-uglify')
 var beautify = require('gulp-jsbeautifier')
@@ -41,9 +41,9 @@ gulp.task('html', function () {
 
 gulp.task('hugo', gulp.series('reset', 'css', 'js', function (fetch) {
   return exec('hugo --source exampleSite', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    fetch(err);
+    console.log(stdout)
+    console.log(stderr)
+    fetch(err)
   })
 }))
 
