@@ -20,7 +20,7 @@
   </div> <!-- /#content -->
 {{ end }}
 {{ define "footerfiles" }}
-  <script src="{{ .Site.BaseURL }}js/jqBootstrapValidation.min.js?v={{ now.Unix }}"></script>
+  <script src="{{ "js/jqBootstrapValidation.min.js" | absURL }}?v={{ now.Unix }}"></script>
   <script type="text/javascript">
   jQuery(document).ready(function (e) {
     /* Contact form */

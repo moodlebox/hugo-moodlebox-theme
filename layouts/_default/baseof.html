@@ -47,7 +47,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.6/lunr.min.js" integrity="sha384-Zm3qBwG4E3sRnvRCwDGO6EFly+4cm/zH679u9r77LrIHy/djaqv6s2mbSNtFJIDH" crossorigin="anonymous"></script>
   <script src="{{ "js/lunr.stemmer.support.min.js" | absURL }}?v={{ now.Unix }}"></script>
   {{- if not (eq .Site.Language.Lang "en") }}
-  <script src="{{ .Site.BaseURL }}js/lunr.{{ .Language | safeJS }}.min.js?v={{ now.Unix }}"></script>
+  <script src="{{ printf "js/lunr.%s.min.js" (.Language | safeJS) | absURL | safeHTML }}?v={{ now.Unix }}"></script>
   {{ end -}}
   <!-- Favicon and various touch icons-->
   <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}" type="image/x-icon" />
