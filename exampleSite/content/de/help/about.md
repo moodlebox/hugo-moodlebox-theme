@@ -1,17 +1,14 @@
 ---
-title: Was ist die MoodleBox
+title: About MoodleBox Design
 authors:
-  - Visvanath Ratnaweera
-  - Ralf Krause
+  - Nicolas Martignoni
 type: kb
 date: 2017-04-21
 description: Die MoodleBox ist ein kleines Gerät, mobil und internetunabhängig. Sie bietet ein drahtloses Netzwerk, mit dem sich jeder über WiFi verbinden kann. Sie stellt eine vollständige Moodle-Lernplattform zur Verfügung
-slug: was-ist-die-moodlebox
+slug: about
 weight: 2
 categories:
   - About
-aliases:
-  - de/about
 
 ---
 Die MoodleBox ist ein kleines Gerät, mobil und internetunabhängig. Die MoodleBox bietet ein drahtloses Netzwerk für Smartphones, Tablets oder Computer. Die MoodleBox stellt eine vollständige [Moodle][1]-Lernplattform zur Verfügung, auf der Lernaktivitäten online angeboten und Dateien untereinander ausgetauscht werden können.

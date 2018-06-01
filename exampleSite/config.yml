@@ -19,7 +19,7 @@ languages:
     title: MoodleBox
     description: A cool theme for Hugo
     about_us: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
-    footertext: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni).
+    footertext: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 onwards
     weight: 1
     contentDir: content/en
@@ -27,43 +27,44 @@ languages:
     date_format: January 2, 2006
     menu:
       main:
-      - identifier: help
-        name: Using MoodleBox
+      - identifier: home
+        name: Home
+        weight: 1
+
+      - identifier: menu_one
+        name: First menu
         weight: 2
 
-      - parent: help
+      - parent: menu_one
         name: Knowledge base
         url: /help/
         weight: 1
-      - parent: help
-        name: Support MoodleBox
-        url: /give/
+      - parent: menu_one
+        name: About MoodleBox Theme
+        url: /help/about/
         weight: 2
-      - parent: help
-        name: About MoodleBox
-        url: /about/
-        weight: 3
-      - parent: help
+      - parent: menu_one
         name: Contact
         url: /contact/
-        weight: 4
-
-      - identifier: get
-        name: Get MoodleBox
         weight: 3
-      - parent: get
+
+      - identifier: menu_two
+        name: Another menu
+        weight: 3
+
+      - parent: menu_two
+        name: Install MoodleBox theme
+        url: /help/install/
+        weight: 1
+      - parent: menu_two
         name: Download the disk image
         url: /dl/
-        weight: 1
-      - parent: get
+        weight: 2
+      - parent: menu_two
         name: Get the hardware
         url: /hardware/
-        weight: 2
-      - parent: get
-        name: Install MoodleBox
-        url: /install/
         weight: 3
-      - parent: get
+      - parent: menu_two
         name: Make your own disk image
         url: /diy/
         weight: 4
@@ -78,11 +79,15 @@ languages:
       subtitle: These are some clients
       title: Our users
 
+    topbar:
+      enable: true
+      text: "Contact us on info@example.com"
+
   fr:
     languageName: Français
     title: MoodleBox
     description: Un thème sympa pour Hugo
-    about_us: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni).
+    about_us: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
     footertext: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 et suivantes
     contentDir: content/fr
@@ -91,44 +96,44 @@ languages:
     date_format: 2 January 2006
     menu:
       main:
-      - identifier: help
-        name: Utiliser la MoodleBox
+      - identifier: home
+        name: Accueil
+        weight: 1
+
+      - identifier: menu_one
+        name: Premier menu
         weight: 2
 
-      - parent: help
+      - parent: menu_one
         name: Assistance
         url: /help/
         weight: 1
-      - parent: help
-        name: Soutenir MoodleBox
-        url: /give/
+      - parent: menu_one
+        name: À propos du thème MoodleBox
+        url: /help/about/
         weight: 2
-      - parent: help
-        name: À propos de MoodleBox
-        url: /about/
-        weight: 3
-      - parent: help
+      - parent: menu_one
         name: Contact
         url: /contact/
-        weight: 4
-
-      - identifier: get
-        name: Obtenir la MoodleBox
         weight: 3
 
-      - parent: get
+      - identifier: menu_two
+        name: Un autre menu
+        weight: 3
+
+      - parent: menu_two
+        name: Installer le thème MoodleBox
+        url: /help/install/
+        weight: 1
+      - parent: menu_two
         name: Télécharger l'image-disque
         url: /dl/
-        weight: 1
-      - parent: get
+        weight: 2
+      - parent: menu_two
         name: Obtenir le matériel
         url: /hardware/
-        weight: 2
-      - parent: get
-        name: Installer MoodleBox
-        url: /install/
         weight: 3
-      - parent: get
+      - parent: menu_two
         name: Créer son image-disque
         url: /diy/
         weight: 4
@@ -143,12 +148,16 @@ languages:
       subtitle: Voici quelques-uns de nos clients
       title: Nos utilisateurs
 
+    topbar:
+      enable: true
+      text: "Contactez-nous sur info@example.com"
+
   de:
     languageName: Deutsch
     title: MoodleBox
-    description: Ein Theme für Hugo
-    about_us: MoodleBox ist ein Theme für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
-    footertext: MoodleBox ist ein Theme für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    description: Ein cooles Design für Hugo
+    about_us: MoodleBox ist ein Design für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    footertext: MoodleBox ist ein Design für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 und später
     contentDir: content/de
     weight: 3
@@ -156,43 +165,44 @@ languages:
     date_format: 2. January 2006
     menu:
       main:
-      - identifier: help
-        name: MoodleBox benutzen
+      - identifier: home
+        name: Home
+        weight: 1
+
+      - identifier: menu_one
+        name: Erstes Menü
         weight: 2
 
-      - parent: help
+      - parent: menu_one
         name: Dokumentation
         url: /help/
         weight: 1
-      - parent: help
-        name: MoodleBox unterstützen
-        url: /give/
+      - parent: menu_one
+        name: Über MoodleBox Design
+        url: /help/about/
         weight: 2
-      - parent: help
-        name: Über MoodleBox
-        url: /about/
-        weight: 3
-      - parent: help
+      - parent: menu_one
         name: Kontakt
         url: /contact/
-        weight: 4
-
-      - identifier: get
-        name: MoodleBox erhalten
         weight: 3
-      - parent: get
+
+      - identifier: menu_two
+        name: Ein anderes Menü
+        weight: 3
+
+      - parent: menu_two
+        name: MoodleBox Design installieren
+        url: /help/install/
+        weight: 1
+      - parent: menu_two
         name: Disk-Image herunterladen
         url: /dl/
-        weight: 1
-      - parent: get
+        weight: 2
+      - parent: menu_two
         name: Hardware beschaffen
         url: /hardware/
-        weight: 2
-      - parent: get
-        name: MoodleBox installieren
-        url: /install/
         weight: 3
-      - parent: get
+      - parent: menu_two
         name: Disk-Image selber erstellen
         url: /diy/
         weight: 4
@@ -206,6 +216,10 @@ languages:
       enable: true
       subtitle: Hier sind einige Kunden
       title: Unsere Benutzer
+
+    topbar:
+      enable: true
+      text: "Nehmen Sie Kontakt via info@example.com"
 
 menu:
   topbar:
@@ -275,10 +289,6 @@ params:
     subtitle: We have prepared for you more than 40 different HTML pages, including
       5 variations of homepage.
     title: Do you want to see more?
-
-  topbar:
-    enable: false
-    text: ""
 
   viewMorePostLink: /help/
 

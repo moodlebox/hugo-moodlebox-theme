@@ -1,16 +1,14 @@
 ---
-title: Comment installer la MoodleBox
+title: Installer le thème MoodleBox
 authors:
   - Nicolas Martignoni
 type: kb
 date: 2017-09-15
 description: La procédure pour installer la MoodleBox en vue de sa première utilisation est décrite ici
-slug: installer-la-moodlebox
+slug: install
 weight: 1
 categories:
   - Premiers pas
-aliases:
-  - fr/install
 
 ---
 Voici la procédure pour installer la MoodleBox en vue de sa première utilisation.
@@ -42,12 +40,5 @@ Il n'y a pas d'autre manipulation à effectuer : dès la fin de son démarrage,
 
 Pour plus d'informations, [consultez la documentation][9].
 
- [1]: {{< relref "hardware-needed.md" >}}
- [2]: {{< relref "download-the-disk-image.md" >}}
- [3]: {{< relref "copy-the-disk-image.md" >}}
- [4]: {{< relref "access-to-moodle.md" >}}
- [5]: {{< relref "wi-fi-connection.md" >}}
- [6]: {{< relref "updating-wi-fi-configuration.md" >}}
- [7]: {{< relref "command-line-access.md" >}}
  [9]: /fr/help
  [10]: https://etcher.io

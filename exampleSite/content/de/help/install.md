@@ -1,17 +1,14 @@
 ---
-title: Wie wird die MoodleBox installiert
+title: MoodleBox Design installieren
 authors:
   - Nicolas Martignoni
-  - Ralf Krause
 type: kb
 date: 2017-09-15
 description: Diese Vorgehensweise ist notwendig, um die MoodleBox für die erste Verwendung zu installieren
-slug: moodlebox-installieren
+slug: install
 weight: 1
 categories:
   - First steps
-aliases:
-  - de/install
 
 ---
 Die folgende Vorgehensweise ist notwendig, um die MoodleBox für die erste Verwendung zu installieren.
@@ -44,12 +41,5 @@ Es sind keine weiteren Einstellungen notwendig. Sofort nach dem Start ist die Mo
 
 Weitere Informationen finden Sie, wenn Sie in unserer [Knowledge Base][9] stöbern.
 
- [1]: {{< relref "hardware-needed.md" >}}
- [2]: {{< relref "download-the-disk-image.md" >}}
- [3]: {{< relref "copy-the-disk-image.md" >}}
- [4]: {{< relref "access-to-moodle.md" >}}
- [5]: {{< relref "wi-fi-connection.md" >}}
- [6]: {{< relref "updating-wi-fi-configuration.md" >}}
- [7]: {{< relref "command-line-access.md" >}}
  [9]: /de/help
  [10]: https://etcher.io
