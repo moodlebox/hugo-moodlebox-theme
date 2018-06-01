@@ -1,7 +1,7 @@
 ---
 date: 2018-02-04
-title: This is a news page
-description: This news page is cool.
+title: Bad news
+description: Bad news:-). Here you can indicate the summary of the news to be published on the home page. There's plenty of room.
 authors:
   - Jane Doe
 slug: news-page-1

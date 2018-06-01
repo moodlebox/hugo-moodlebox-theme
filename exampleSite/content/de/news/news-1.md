@@ -1,7 +1,7 @@
 ---
 date: 2018-02-04
 title: Das ist eine News
-description: Diese Seite ist cool
+description: Schlechte Nachrichten:-). Hier kann man die Übersicht der Nachrichten angeben, die auf der Homepage veröffentlicht werden sollen. Es gibt genug Platz.
 authors:
   - Jane Doe
 slug: news-page-1

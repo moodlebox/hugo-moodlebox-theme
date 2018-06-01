@@ -1,7 +1,7 @@
 ---
 date: 2018-04-24
 title: This is yet another news page
-description: This is isn't good news, sorry
+description: This brief is fake news! It doesn't matter. If the summary is too long, the text is automatically truncated so that the display remains of good quality.
 authors:
   - Jane Doe
 slug: news-page-3

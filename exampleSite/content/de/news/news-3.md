@@ -1,7 +1,7 @@
 ---
 date: 2018-04-24
-title: Noch eine News Seite
-description: Das ist keine gute Nachricht
+title: Falsche Nachricht
+description: Dieser Brief ist eine falsche Nachricht! Das spielt keine Rolle. Wenn die Zusammenfassung zu lang ist, wird der Text automatisch abgeschnitten, so dass die Anzeige von guter Qualität bleibt.
 authors:
   - Jane Doe
 slug: news-page-3

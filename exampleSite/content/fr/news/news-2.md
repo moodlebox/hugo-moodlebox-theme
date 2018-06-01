@@ -1,7 +1,7 @@
 ---
 date: 2018-03-14
 title: Autres nouvelles
-description: Cette brève est aussi cool
+description: Cette brève est aussi cool. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 authors:
   - Albert Martin
 slug: news-page-2

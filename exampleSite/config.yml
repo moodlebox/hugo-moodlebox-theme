@@ -57,17 +57,13 @@ languages:
         url: /help/install/
         weight: 1
       - parent: menu_two
-        name: Download the disk image
-        url: /dl/
+        name: Create a theme
+        url: /help/create-a-theme/
         weight: 2
       - parent: menu_two
-        name: Get the hardware
-        url: /hardware/
+        name: Go is for lovers
+        url: /help/go-is-for-lovers
         weight: 3
-      - parent: menu_two
-        name: Make your own disk image
-        url: /diy/
-        weight: 4
 
     testimonials:
       enable: true
@@ -126,17 +122,13 @@ languages:
         url: /help/install/
         weight: 1
       - parent: menu_two
-        name: Télécharger l'image-disque
-        url: /dl/
+        name: Créer un thème
+        url: /help/creer-un-theme/
         weight: 2
       - parent: menu_two
-        name: Obtenir le matériel
-        url: /hardware/
+        name: Go is for lovers
+        url: /help/go-is-for-lovers
         weight: 3
-      - parent: menu_two
-        name: Créer son image-disque
-        url: /diy/
-        weight: 4
 
     testimonials:
       enable: true
@@ -195,17 +187,13 @@ languages:
         url: /help/install/
         weight: 1
       - parent: menu_two
-        name: Disk-Image herunterladen
-        url: /dl/
+        name: Design erstellen
+        url: /help/design-erstellen/
         weight: 2
       - parent: menu_two
-        name: Hardware beschaffen
-        url: /hardware/
+        name: Go is for lovers
+        url: /help/go-is-for-lovers
         weight: 3
-      - parent: menu_two
-        name: Disk-Image selber erstellen
-        url: /diy/
-        weight: 4
 
     testimonials:
       enable: true

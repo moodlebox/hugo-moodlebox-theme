@@ -8,7 +8,7 @@ description: La MoodleBox est un dispositif mobile indépendant d'Internet perme
 slug: about
 weight: 2
 categories:
-  - About
+  - À propos
 
 ---
 La MoodleBox est un dispositif mobile indépendant d'Internet permettant de créer un réseau local auquel chacun peut se connecter par Wi-Fi au moyen d'un smartphone, d'une tablette ou d'un ordinateur. Elle fournit un environnement d'apprentissage [Moodle][1] complet pour des activités d'apprentissage et pour partager des fichiers.
@@ -32,7 +32,6 @@ L'image-disque de la MoodleBox et les informations présentées sur ce site web 
 L'auteur ne s'engage par ailleurs à aucune correction de l'image-disque ou de ce site web et de cette documentation.
 
  [1]: https://moodle.org
- [2]: {{< relref "hardware-needed.md" >}}
  [3]: https://www.raspberrypi.org
  [4]: https://moodle.org/course/view.php?id=20
  [5]: https://moodle.org/mod/forum/discuss.php?d=318719

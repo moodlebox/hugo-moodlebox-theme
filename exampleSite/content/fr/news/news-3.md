@@ -1,7 +1,7 @@
 ---
 date: 2018-04-24
-title: Mauvaises nouvelles
-description: Cette brève est une fausse nouvelle !
+title: Bonnes nouvelles
+description: Cette brève est une fausse nouvelle ! Pas grave. Si le résumé est trop long, le texte est tronqué automatiquement pour que l'affichage reste de bonne qualité.
 authors:
   - Albert Martin
 slug: news-page-3

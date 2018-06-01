@@ -1,7 +1,7 @@
 ---
 date: 2018-02-04
-title: Bonnes nouvelles
-description: Cette brève est cool
+title: Mauvaises nouvelles
+description: Mauvaises nouvelles :-). On peut indiquer ici le résumé de la nouvelle à publier sur la page d'accueil. Il y a assez de place.
 authors:
   - Albert Martin
 slug: news-page-1

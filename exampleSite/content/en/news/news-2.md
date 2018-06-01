@@ -1,7 +1,7 @@
 ---
 date: 2018-03-14
 title: This is a news page too, another one
-description: This news page is also cool.
+description: This news page is also cool. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 authors:
   - Jane Doe
 slug: news-page-2

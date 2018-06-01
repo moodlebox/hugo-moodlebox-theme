@@ -1,7 +1,7 @@
 ---
 date: 2018-03-14
 title: Das ist auch eine News
-description: Auch diese Seite ist cool
+description: Auch diese Seite ist cool. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 authors:
   - Jane Doe
 slug: news-page-2
