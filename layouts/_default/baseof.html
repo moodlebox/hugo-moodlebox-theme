@@ -39,6 +39,10 @@
   <!-- Owl carousel css -->
   <link href="{{ "css/owl.carousel.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
   <link href="{{ "css/owl.theme.min.css" | absURL }}?v={{ now.Unix }}" rel="stylesheet">
+  <!-- Custom styles -->
+  {{ range .Site.Params.custom_css -}}
+    <link href="{{ . | absURL }}" rel="stylesheet">
+  {{- end }}
   <!-- Responsivity for older IE -->
   {{- `<!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
