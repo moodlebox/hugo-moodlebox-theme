@@ -19,7 +19,7 @@
             <h4>{{ i18n "recentPosts" }}</h4>
 
             <div class="blog-entries">
-                {{ range first 3 (where .Site.Pages "Type" "kb") }}
+                {{ range first 3 (where .Site.Pages.ByLastmod "Type" "kb") }}
                 <div class="item same-height-row clearfix">
                     {{ if false }}
                     <div class="image same-height-always">
