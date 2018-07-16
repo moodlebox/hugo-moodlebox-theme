@@ -37,7 +37,7 @@
 - id: authorBy
   translation: "Par"
 - id: recentPosts
-  translation: "Publié récemment"
+  translation: "Modifié récemment"
 - id: aboutUs
   translation: "À propos"
 - id: newer
