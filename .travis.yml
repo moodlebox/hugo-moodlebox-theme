@@ -7,7 +7,7 @@ go:
   - master
 
 install:
-  - wget -O /tmp/hugo.deb  https://github.com/gohugoio/hugo/releases/download/v"$HUGO_RELEASE"/hugo_extended_"$HUGO_RELEASE"_Linux-64bit.deb
+  - wget -O /tmp/hugo.deb  https://github.com/gohugoio/hugo/releases/download/v"$HUGO_RELEASE"/hugo_extended_"$HUGO_RELEASE"_Linux_64bit.deb
   - sudo dpkg -i /tmp/hugo.deb
   - npm install
 
