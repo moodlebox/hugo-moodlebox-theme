@@ -43,7 +43,7 @@
   {{ else }}
     {{ $cssOpts := (dict "enableSourceMap" false ) }}
     {{ $fontsCSS := resources.Get "css/fonts.css" | toCSS $cssOpts | minify | fingerprint }}
-    {{ $moodleboxCSS := resources.Get "css/custom.css" | toCSS $cssOpts | minify | fingerprint }}
+    {{ $moodleboxCSS := resources.Get "css/moodlebox.css" | toCSS $cssOpts | minify | fingerprint }}
     {{ $syntaxCSS := resources.Get "css/syntax.css" | toCSS $cssOpts | minify | fingerprint }}
     {{ $customCSS := resources.Get "css/custom.css" | toCSS $cssOpts | minify | fingerprint }}
     <link href="{{ $fontsCSS.Permalink }}" integrity="{{ $fontsCSS.Data.Integrity }}" rel="stylesheet">
