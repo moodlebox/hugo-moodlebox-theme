@@ -7,7 +7,7 @@ go:
   - master
 
 install:
-  - curl -LO https://github.com/gohugoio/hugo/releases/download/v"$HUGO_RELEASE"/hugo_extended_"$HUGO_RELEASE"_Linux-64bit.deb
+  - wget --retry-connrefused https://github.com/gohugoio/hugo/releases/download/v"$HUGO_RELEASE"/hugo_extended_"$HUGO_RELEASE"_Linux-64bit.deb
   - sudo dpkg -i hugo*.deb
   - npm install
 
