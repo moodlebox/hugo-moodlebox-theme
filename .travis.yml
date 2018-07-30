@@ -15,8 +15,9 @@ before_script:
   - npm install -g "gulpjs/gulp#4.0"
 
 script:
+  - snap info hugo
   - npm run lint
-  - hugo version
+  - $HOME/hugo version
   - gulp
 
 env:
