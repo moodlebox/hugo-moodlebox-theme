@@ -7,8 +7,8 @@ go:
   - master
 
 install:
-  - wget --retry-connrefused https://github.com/gohugoio/hugo/releases/download/v0.45.1/hugo_extended_0.45.1_Linux-64bit.deb
-  - sudo dpkg -i hugo*.deb
+  - wget -O /tmp/hugo.deb  https://github.com/gohugoio/hugo/releases/download/v"$HUGO_RELEASE"/hugo_extended_"$HUGO_RELEASE"_Linux-64bit.deb
+  - sudo dpkg -i /tmp/hugo.deb
   - npm install
 
 before_script:
