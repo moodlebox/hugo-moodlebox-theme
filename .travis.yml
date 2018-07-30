@@ -16,6 +16,7 @@ before_script:
 
 script:
   - npm run lint
+  - hugo version
   - gulp
 
 env:
