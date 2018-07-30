@@ -36,7 +36,7 @@
     {{ $moodleboxCSS := resources.Get "css/moodlebox.css" | toCSS $cssOpts }}
     {{ $customCSS := resources.Get "css/custom.css" | toCSS $cssOpts }}
     <link href="{{ $fontsCSS.Permalink }}" rel="stylesheet">
-    <link href="{{ $customCSS.Permalink }}" rel="stylesheet">
+    <link href="{{ $moodleboxCSS.Permalink }}" rel="stylesheet">
     <link href="{{ $customCSS.Permalink }}" rel="stylesheet">
   {{ else }}
     {{ $cssOpts := (dict "enableSourceMap" false ) }}
