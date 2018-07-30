@@ -12,7 +12,8 @@ var del = require('del')
 gulp.task('reset', function () {
   return del([
     'exampleSite/public',
-    'exampleSite/static'
+    'exampleSite/static',
+    'exampleSite/resources',
   ])
 })
 
