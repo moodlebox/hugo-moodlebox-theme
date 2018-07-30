@@ -19,9 +19,6 @@ script:
   - /snap/bin/hugo version
   - gulp
 
-#env:
-#  - HUGO_RELEASE=0.45.1
-#
 cache:
   directories:
     - node_modules
