@@ -40,7 +40,7 @@ gulp.task('html', function () {
 })
 
 gulp.task('hugo', gulp.series('reset', 'css', 'js', function (fetch) {
-  return exec('hugo --source exampleSite', function (err, stdout, stderr) {
+  return exec('/snap/bin/hugo --source exampleSite', function (err, stdout, stderr) {
     console.log(stdout)
     console.log(stderr)
     fetch(err)

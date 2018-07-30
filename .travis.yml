@@ -15,14 +15,13 @@ before_script:
   - npm install -g "gulpjs/gulp#4.0"
 
 script:
-  - snap info hugo
   - npm run lint
-  - $HOME/hugo version
+  - /snap/bin/hugo version
   - gulp
 
-env:
-  - HUGO_RELEASE=0.45.1
-
+#env:
+#  - HUGO_RELEASE=0.45.1
+#
 cache:
   directories:
     - node_modules
