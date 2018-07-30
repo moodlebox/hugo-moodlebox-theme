@@ -13,7 +13,7 @@ gulp.task('reset', function () {
   return del([
     'exampleSite/public',
     'exampleSite/static',
-    'exampleSite/resources',
+    'exampleSite/resources'
   ])
 })
 
