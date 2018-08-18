@@ -72,10 +72,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->` | safeHTML }}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.1.6/lunr.min.js" integrity="sha384-Zm3qBwG4E3sRnvRCwDGO6EFly+4cm/zH679u9r77LrIHy/djaqv6s2mbSNtFJIDH" crossorigin="anonymous"></script>
-  <script src="{{ "js/lunr.stemmer.support.min.js" | absURL }}?v={{ now.Unix }}"></script>
-  {{- if not (eq .Site.Language.Lang "en") }}
-  <script src="{{ printf "js/lunr.%s.min.js" (.Language | safeJS) | absURL | safeHTML }}?v={{ now.Unix }}"></script>
-  {{ end -}}
+  {{ if .Site.IsServer }}
+    {{ $lunrStemmerJS := resources.Get "js/lunr.stemmer.support.js" }}
+    <script src="{{ $lunrStemmerJS.Permalink }}"></script>
+    {{- if not (eq .Site.Language.Lang "en") }}
+      {{ $lunrLangJS := resources.Get printf "js/lunr.%s.js" (.Language | safeJS) }}
+      <script src="{{ $lunrStemmerJS.Permalink }}"></script>
+    {{ end -}}
+  {{ else }}
+    {{ $lunrStemmerJS := resources.Get "js/lunr.stemmer.support.js" | minify | fingerprint }}
+    <script src="{{ $lunrStemmerJS.Permalink }}" integrity="{{ $lunrStemmerJS.Data.Integrity }}"></script>
+  {{ end }}
   <!-- Favicon and various touch icons-->
   <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}" type="image/x-icon" />
   <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | absURL }}" sizes="180x180">
