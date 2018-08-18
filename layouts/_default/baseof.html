@@ -77,14 +77,14 @@
     <script src="{{ $lunrStemmerJS.Permalink }}"></script>
     {{- if not (eq .Site.Language.Lang "en") }}
       {{ $lunrLangJS := resources.Get (printf "js/lunr.%s.js" (.Language | safeJS)) }}
-      <script src="{{ $lunrStemmerJS.Permalink }}"></script>
+      <script src="{{ $lunrLangJS.Permalink }}"></script>
     {{ end -}}
   {{ else }}
     {{ $lunrStemmerJS := resources.Get "js/lunr.stemmer.support.js" | minify | fingerprint }}
     <script src="{{ $lunrStemmerJS.Permalink }}" integrity="{{ $lunrStemmerJS.Data.Integrity }}"></script>
     {{- if not (eq .Site.Language.Lang "en") }}
       {{ $lunrLangJS := resources.Get (printf "js/lunr.%s.js" (.Language | safeJS)) | minify | fingerprint }}
-      <script src="{{ $lunrStemmerJS.Permalink }}" integrity="{{ $lunrStemmerJS.Data.Integrity }}"></script>
+      <script src="{{ $lunrLangJS.Permalink }}" integrity="{{ $lunrLangJS.Data.Integrity }}"></script>
     {{ end -}}
   {{ end }}
   <!-- Favicon and various touch icons-->
