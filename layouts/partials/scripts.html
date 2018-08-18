@@ -5,12 +5,15 @@
   {{ if .Site.IsServer }}
     {{ $frontJS := resources.Get "js/front.js" }}
     {{ $moodleboxJS := resources.Get "js/moodlebox.js" }}
+    {{ $owlJS := resources.Get "js/owl.carousel.js" }}
     <script src="{{ $frontJS.Permalink }}"></script>
     <script src="{{ $moodleboxJS.Permalink }}"></script>
+    <script src="{{ $owlJS.Permalink }}"></script>
   {{ else }}
     {{ $frontJS := resources.Get "js/front.js" | minify | fingerprint }}
     {{ $moodleboxJS := resources.Get "js/moodlebox.js" | minify | fingerprint }}
+    {{ $owlJS := resources.Get "js/owl.carousel.js" | minify | fingerprint }}
     <script src="{{ $frontJS.Permalink }}" integrity="{{ $frontJS.Data.Integrity }}"></script>
     <script src="{{ $moodleboxJS.Permalink }}" integrity="{{ $moodleboxJS.Data.Integrity }}"></script>
+    <script src="{{ $owlJS.Permalink }}" integrity="{{ $owlJS.Data.Integrity }}"></script>
   {{ end }}
-  <script src="{{ "js/owl.carousel.min.js" | absURL }}?v={{ now.Unix }}"></script>
