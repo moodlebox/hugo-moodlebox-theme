@@ -1,48 +1,48 @@
 - id: home
   translation: "Beranda"
--id: templateBy
+- id: templateBy
   translation: "Templat dibuat oleh"
--id: portedBy
+- id: portedBy
   translation: "Diadapatasi ke Hugo oleh"
--id: contactGoTo
+- id: contactGoTo
   translation: "Ke laman kontak"
--id: contactAddrTitle
+- id: contactAddrTitle
   translation: "Alamat"
--id: contactTitle
+- id: contactTitle
   translation: "Kontak"
--id: contactForm
+- id: contactForm
   translation: "Formulir pertanyaan"
--id: contactName
+- id: contactName
   translation: "Nama Anda"
--id: contactMail
+- id: contactMail
   translation: "Surel Anda"
--id: contactMessage
+- id: contactMessage
   translation: "Pesan Anda"
--id: contactSend
+- id: contactSend
   translation: "Kirim pesan"
--id: navHome
+- id: navHome
   translation: "ke laman utama"
--id: navToggle
+- id: navToggle
   translation: "Buka navigasi"
--id: categoriesTitle
+- id: categoriesTitle
   translation: "Kategori"
--id: searchTitle
+- id: searchTitle
   translation: "Cari"
--id: tagsTitle
+- id: tagsTitle
   translation: "Tags"
--id: continueReading
+- id: continueReading
   translation: "Lanjutkan membaca"
--id: readMore
+- id: readMore
   translation: "Baca selengkapnya"
--id: authorBy
+- id: authorBy
   translation: "Oleh"
--id: recentPosts
+- id: recentPosts
   translation: "Kiriman terkini"
--id: aboutUs
+- id: aboutUs
   translation: "Tentang kami"
--id: newer
+- id: newer
   translation: "Terbaru"
--id: older
+- id: older
   translation: "Lebih lama"
--id: publishedOn
+- id: publishedOn
   translation: "pada"
