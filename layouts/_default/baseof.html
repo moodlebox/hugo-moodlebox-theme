@@ -82,6 +82,10 @@
   {{ else }}
     {{ $lunrStemmerJS := resources.Get "js/lunr.stemmer.support.js" | minify | fingerprint }}
     <script src="{{ $lunrStemmerJS.Permalink }}" integrity="{{ $lunrStemmerJS.Data.Integrity }}"></script>
+    {{- if not (eq .Site.Language.Lang "en") }}
+      {{ $lunrLangJS := resources.Get (printf "js/lunr.%s.js" (.Language | safeJS)) | minify | fingerprint }}
+      <script src="{{ $lunrStemmerJS.Permalink }}" integrity="{{ $lunrStemmerJS.Data.Integrity }}"></script>
+    {{ end -}}
   {{ end }}
   <!-- Favicon and various touch icons-->
   <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}" type="image/x-icon" />
