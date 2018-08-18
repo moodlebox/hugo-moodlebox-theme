@@ -76,7 +76,7 @@
     {{ $lunrStemmerJS := resources.Get "js/lunr.stemmer.support.js" }}
     <script src="{{ $lunrStemmerJS.Permalink }}"></script>
     {{- if not (eq .Site.Language.Lang "en") }}
-      {{ $lunrLangJS := resources.Get printf "js/lunr.%s.js" (.Language | safeJS) }}
+      {{ $lunrLangJS := resources.Get (printf "js/lunr.%s.js" (.Language | safeJS)) }}
       <script src="{{ $lunrStemmerJS.Permalink }}"></script>
     {{ end -}}
   {{ else }}
