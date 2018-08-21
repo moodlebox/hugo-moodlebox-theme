@@ -1,9 +1,9 @@
 <footer id="footer">
   <div class="container">
-    {{ if isset .Site.Params "about_us" }}
+    {{ if isset .Site.Params "about" }}
     <div id="about-us" class="col-md-4 col-sm-6">
       <h4>{{ i18n "aboutUs" }}</h4>
-      <p>{{ .Site.Params.about_us | markdownify }}</p>
+      <p>{{ .Site.Params.about | markdownify }}</p>
       <hr class="hidden-md hidden-lg hidden-sm">
     </div> <!-- /.col-md-4 -->
     {{ end }}

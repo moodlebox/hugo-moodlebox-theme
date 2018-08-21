@@ -18,7 +18,7 @@ languages:
     languageName: English
     title: MoodleBox
     description: A cool theme for Hugo
-    about_us: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    about: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
     footertext: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 onwards
     weight: 1
@@ -83,7 +83,7 @@ languages:
     languageName: Français
     title: MoodleBox
     description: Un thème sympa pour Hugo
-    about_us: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    about: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
     footertext: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 et suivantes
     contentDir: content/fr
@@ -148,7 +148,7 @@ languages:
     languageName: Deutsch
     title: MoodleBox
     description: Ein cooles Design für Hugo
-    about_us: MoodleBox ist ein Design für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
+    about: MoodleBox ist ein Design für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
     footertext: MoodleBox ist ein Design für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 und später
     contentDir: content/de
