@@ -2601,7 +2601,7 @@ fieldset[disabled] .btn-template-primary.active {
 #footer .social a:hover {
   color: #da4d4d;
 }
-#copyright {
+#post-footer {
   background: #333;
   color: #ccc;
   padding: 30px 0;
@@ -2609,17 +2609,17 @@ fieldset[disabled] .btn-template-primary.active {
   font-weight: 500;
   line-height: 28px;
 }
-#copyright p {
+#post-footer p {
   margin: 0;
 }
-#copyright a {
+#post-footer a {
   color: #ccc;
 }
-#footer #about-us a {
+#about-us a {
   color: #eee;
 }
 @media (max-width: 991px) {
-  #copyright p {
+  #post-footer p {
     float: none !important;
     text-align: center;
     margin-bottom: 10px;
