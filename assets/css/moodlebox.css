@@ -2615,6 +2615,9 @@ fieldset[disabled] .btn-template-primary.active {
 #post-footer a {
   color: #ccc;
 }
+#post-footer .post-footer-item {
+  margin: 0 2rem;
+}
 #about-us a {
   color: #eee;
 }
