@@ -50,14 +50,14 @@
 <div id="post-footer">
   <div class="container">
     <div class="col-md-12 text-center">
-    {{ if isset .Site.Params "copyright" }}
-      {{ .Site.Params.copyright | markdownify }}
+    {{ if isset .Site.Params "privacy" }}
+      <span id="privacy" class="post-footer-item">{{ .Site.Params.privacy | markdownify }}</span>
     {{ end }}
-    {{ if (and (isset .Site.Params "copyright") (isset .Site.Params "footertext")) }}
-      &mdash;
+    {{ if isset .Site.Params "cookies" }}
+      <span id="cookies" class="post-footer-item">{{ .Site.Params.cookies | markdownify }}</span>
     {{ end }}
-    {{ if isset .Site.Params "footertext" }}
-      {{ .Site.Params.footertext | markdownify }}
+    {{ if isset .Site.Params "license" }}
+      <span id="license" class="post-footer-item">{{ .Site.Params.license | markdownify }}</span>
     {{ end }}
     </div>
   </div>

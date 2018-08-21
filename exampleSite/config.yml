@@ -19,8 +19,9 @@ languages:
     title: MoodleBox
     description: A cool theme for Hugo
     about: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
-    footertext: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 onwards
+    privacy: Privacy
+    license: License
     weight: 1
     contentDir: content/en
     # Format dates with Go's time formatting
@@ -84,8 +85,9 @@ languages:
     title: MoodleBox
     description: Un thème sympa pour Hugo
     about: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
-    footertext: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 et suivantes
+    privacy: Confidentialité
+    license: Licence
     contentDir: content/fr
     weight: 2
     # Format dates with Go's time formatting
@@ -149,8 +151,9 @@ languages:
     title: MoodleBox
     description: Ein cooles Design für Hugo
     about: MoodleBox ist ein Design für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
-    footertext: MoodleBox ist ein Design für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 und später
+    privacy: Datenschutz
+    license: Lizenz
     contentDir: content/de
     weight: 3
     # Format dates with Go's time formatting
