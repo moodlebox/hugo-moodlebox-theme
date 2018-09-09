@@ -16,13 +16,7 @@
   {{- else if .Site.Params.DefaultKeywords -}}
   <meta name="keywords" content="{{ delimit .Site.Params.DefaultKeywords ", " }}">
   {{- end }}
-  {{ if .Description -}}
-  <meta name="description" content="{{ .Description }}">
-  {{- else if .Site.Params.Description -}}
-  <meta name="description" content="{{ .Site.Params.Description }}">
-  {{- else if .Site.Params.DefaultDescription -}}
-  <meta name="description" content="{{ .Site.Params.DefaultDescription }}">
-  {{- end }}
+  <meta name="description" content="{{ partial "description" . }}">
   <link rel="alternate" href="{{ "/index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
   {{ partial "hreflang.html" . }}
   {{ partial "seo-metadata.html" . }}

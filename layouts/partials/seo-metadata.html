@@ -15,13 +15,7 @@
   "url": "{{ .Permalink }}",
   "name" : "{{ .Title }}",
   "headline" : "{{ .Title }}",
-  {{ if .Description -}}
-  "description": "{{ .Description }}",
-  {{- else if .Site.Params.Description -}}
-  "description": "{{ .Site.Params.Description }}",
-  {{- else -}}
-  "description": "{{ .Site.Params.DefaultDescription }}",
-  {{- end }}
+  "description": "{{ partial "description" . }}",
   "image" : "{{ .Site.Params.logo | absURL }}",
   "inLanguage" : "{{ .Language }}",
   "author" : "{{ .Site.Params.Author }}",
