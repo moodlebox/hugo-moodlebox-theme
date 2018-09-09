@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="robots" content="all,follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ block "title" . }}{{ partial "title" . }}{{ end }}</title>
   <!-- OpenGraph metatags -->
   {{ template "_internal/opengraph.html" . }}
   <!-- OpenGraph supplementary metatags -->
