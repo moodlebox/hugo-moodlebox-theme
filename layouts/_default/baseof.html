@@ -4,6 +4,11 @@
   <meta charset="utf-8">
   <meta name="robots" content="all,follow">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-title" content="MoodleBox">
+  <meta name="application-name" content="MoodleBox">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-config" content="/img/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
   <title>{{ block "title" . }}{{ partial "title" . }}{{ end }}</title>
   <!-- OpenGraph metatags -->
   {{ template "_internal/opengraph.html" . }}
@@ -87,7 +92,7 @@
   <link rel="icon" type="image/png" href="{{ "img/favicon-32x32.png" | absURL }}" sizes="32x32">
   <link rel="icon" type="image/png" href="{{ "img/favicon-16x16.png" | absURL }}" sizes="16x16">
   <link rel="manifest" href="{{ "img/manifest.json" | absURL }}">
-  <link rel="mask-icon" href="{{ "img/safari-pinned-tab.svg" | absURL }}" color="#5bbad5">
+  <link rel="mask-icon" href="{{ "img/safari-pinned-tab.svg" | absURL }}" color="#bd3843">
   {{ block "headfiles" . }}
    <!-- pl;aceholder -->
   {{ end }}
