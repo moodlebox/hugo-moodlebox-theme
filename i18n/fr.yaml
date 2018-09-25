@@ -89,11 +89,11 @@
 - id: recentNews
   translation: "Nouveautés"
 - id: warning
-  translation: "Attention"
+  translation: "Avertissement"
 - id: note
-  translation: "Note"
+  translation: "Remarque"
 - id: info
-  translation: "Info"
+  translation: "Information"
 - id: tip
   translation: "Astuce"
 - id: lastUpdated
