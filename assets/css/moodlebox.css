@@ -1748,6 +1748,12 @@ fieldset[disabled] .btn-template-primary.active {
     text-align: center;
   }
 }
+@media (max-width: 767px) {
+  #heading-breadcrumbs h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
 #heading-breadcrumbs ul.breadcrumb {
   margin-top: 5px;
   margin-bottom: 0;
