@@ -22,6 +22,7 @@ languages:
     copyright: Copyright © 2018 onwards
     privacy: Privacy
     license: License
+    donate: Donate
     weight: 1
     contentDir: content/en
     # Format dates with Go's time formatting
@@ -88,6 +89,7 @@ languages:
     copyright: Copyright © 2018 et suivantes
     privacy: Confidentialité
     license: Licence
+    donate: Faire un don
     contentDir: content/fr
     weight: 2
     # Format dates with Go's time formatting
@@ -154,6 +156,7 @@ languages:
     copyright: Copyright © 2018 und später
     privacy: Datenschutz
     license: Lizenz
+    donate: Spenden
     contentDir: content/de
     weight: 3
     # Format dates with Go's time formatting

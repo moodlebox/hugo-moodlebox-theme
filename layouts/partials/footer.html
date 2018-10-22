@@ -59,6 +59,9 @@
     {{ if isset .Site.Params "license" }}
       <span id="license" class="post-footer-item">{{ .Site.Params.license | markdownify }}</span>
     {{ end }}
+    {{ if isset .Site.Params "donate" }}
+      <span id="license" class="post-footer-item">{{ .Site.Params.donate | markdownify }}</span>
+    {{ end }}
     </div>
   </div>
 </div> <!-- /#post-footer -->
