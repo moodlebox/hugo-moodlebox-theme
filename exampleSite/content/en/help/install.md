@@ -40,5 +40,5 @@ There is no other manipulation to do: after the boot, your MoodleBox is ready an
 
 For more information, browse the [knowledge base][9].
 
- [9]: /en/help
+ [9]: {{< relref "/help" >}}
  [10]: https://etcher.io

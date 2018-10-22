@@ -40,5 +40,5 @@ Il n'y a pas d'autre manipulation à effectuer : dès la fin de son démarrage,
 
 Pour plus d'informations, [consultez la documentation][9].
 
- [9]: /fr/help
+ [9]: {{< relref "/help" >}}
  [10]: https://etcher.io

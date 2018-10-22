@@ -41,5 +41,5 @@ Es sind keine weiteren Einstellungen notwendig. Sofort nach dem Start ist die Mo
 
 Weitere Informationen finden Sie, wenn Sie in unserer [Knowledge Base][9] stöbern.
 
- [9]: /de/help
+ [9]: {{< relref "/help" >}}
  [10]: https://etcher.io
