@@ -7,8 +7,8 @@ go:
   - master
 
 install:
-  - sudo apt-get install snapd
-  - sudo snap install hugo --channel=extended/stable --classic
+  - wget https://github.com/gohugoio/hugo/releases/download/v"$HUGO_RELEASE"/hugo_extended_"$HUGO_RELEASE"_Linux-64bit.deb
+  - sudo dpkg -i hugo*.deb
   - npm install
 
 before_script:
@@ -16,8 +16,11 @@ before_script:
 
 script:
   - npm run lint
-  - /snap/bin/hugo version
+  - hugo version
   - gulp
+
+env:
+  - HUGO_RELEASE=0.49
 
 cache:
   directories:
