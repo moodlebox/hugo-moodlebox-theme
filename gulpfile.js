@@ -33,19 +33,19 @@ gulp.task('js', function () {
     .pipe(gulp.dest('exampleSite/static/js'))
 })
 
+gulp.task('hugo', gulp.series('reset', 'css', 'js', function (fetch) {
+  return exec('hugo --source exampleSite', function (err, stdout, stderr) {
+    console.log(stdout)
+    console.log(stderr)
+    fetch(err)
+  })
+}))
+
 gulp.task('html', function () {
   return gulp.src(['exampleSite/public/**/*.html', 'exampleSite/public/**/*.xml'])
     .pipe(beautify({indent_char: ' ', indent_size: 2}))
     .pipe(replace(/^\s*\r?\n/gm, ''))
     .pipe(gulp.dest('exampleSite/public'))
 })
-
-gulp.task('hugo', gulp.series('reset', 'css', 'js', function (fetch) {
-  return exec('/snap/bin/hugo --source exampleSite', function (err, stdout, stderr) {
-    console.log(stdout)
-    console.log(stderr)
-    fetch(err)
-  })
-}))
 
 gulp.task('default', gulp.series('hugo', 'html', 'reset'))
