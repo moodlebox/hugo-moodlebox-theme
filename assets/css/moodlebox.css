@@ -3782,6 +3782,11 @@ section.news {
   font-weight: 600;
   color: #da4d4d;
 }
+@media (max-width: 767px) {
+  .section-head .kb-category-level-1 {
+    font-size: 1.2em;
+  }
+}
 .kb-section-body {
   padding: .5em 0em 2em;
 }
@@ -3803,6 +3808,8 @@ section.news {
   font-size: 1em;
   display: block;
   color: #2a2a2a;
+  padding-left: 2em;
+  text-indent: -1em;
 }
 .kb-article-title i {
   color: #b3b3b3;
