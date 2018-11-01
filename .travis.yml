@@ -16,9 +16,6 @@ install:
   - sudo dpkg -i hugo*.deb
   - npm install
 
-before_script:
-  - npm install "gulpjs/gulp#v4.0.0"
-
 script:
   - npm run lint
   - hugo version
