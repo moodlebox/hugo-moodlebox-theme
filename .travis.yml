@@ -22,7 +22,7 @@ script:
   - gulp
 
 env:
-  - HUGO_RELEASE=0.50
+  - HUGO_RELEASE=0.52
 
 cache:
   directories:
