@@ -51,16 +51,29 @@
   <div class="container">
     <div class="col-md-12 text-center">
     {{ if isset .Site.Params "privacy" }}
-      <span id="privacy" class="post-footer-item">{{ .Site.Params.privacy | markdownify }}</span>
+      <span id="privacy" class="post-footer-item">
+        <a href="{{ .LanguagePrefix }}/privacy" class="">{{ i18n "privacyTitle" }}</a>
+      </span>
     {{ end }}
     {{ if isset .Site.Params "cookies" }}
-      <span id="cookies" class="post-footer-item">{{ .Site.Params.cookies | markdownify }}</span>
+      <span id="cookies" class="post-footer-item">
+        <a href="{{ .LanguagePrefix }}/cookies" class="">{{ i18n "cookiesTitle" }}</a>
+      </span>
     {{ end }}
     {{ if isset .Site.Params "license" }}
-      <span id="license" class="post-footer-item">{{ .Site.Params.license | markdownify }}</span>
+      <span id="license" class="post-footer-item">
+        <a href="{{ .LanguagePrefix }}/license" class="">{{ i18n "licenseTitle" }}</a>
+      </span>
     {{ end }}
     {{ if isset .Site.Params "donate" }}
-      <span id="donate" class="post-footer-item">{{ .Site.Params.donate | markdownify }}</span>
+      <span id="donate" class="post-footer-item">
+        <a href="{{ .LanguagePrefix }}/give" class="">{{ i18n "donateTitle" }}</a>
+      </span>
+    {{ end }}
+    {{ if isset .Site.Params "address" }}
+      <span id="address" class="post-footer-item">
+        <a href="{{ .LanguagePrefix }}/contact" class="">{{ i18n "contactTitle" }}</a>
+      </span>
     {{ end }}
     </div>
   </div>
