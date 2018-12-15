@@ -100,6 +100,12 @@
   translation: "Letzte Aktualisierung:"
 - id: seeAllDoc
   translation: "Schauen Sie die Dokumentation"
+- id: privacyTitle
+  translation: "Datenschutz"
+- id: licenseTitle
+  translation: "Lizenz"
+- id: donateTitle
+  translation: "Spenden"
 
 - id: January
   translation: "Januar"
