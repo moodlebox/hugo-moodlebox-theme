@@ -106,6 +106,8 @@
   translation: "License"
 - id: donateTitle
   translation: "Donate"
+- id: cookiesTitle
+  translation: "Cookies"
 
 - id: January
   translation: "January"
