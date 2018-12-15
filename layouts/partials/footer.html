@@ -35,11 +35,10 @@
       {{ end }} {{ end }}
     </div>  <!-- /.col-md-4 -->
 
-    {{ if isset .Site.Params "address" }}
-    <div id="address" class="col-md-4 col-sm-6">
-      <h4>{{ i18n "contactTitle" }}</h4>
-        {{ .Site.Params.address | markdownify }}
-        <a href="{{ .LanguagePrefix }}/contact" class="btn btn-small btn-template-main">{{ i18n "contactGoTo" }}</a>
+    {{ if .Site.Params.donate.enable }}
+    <div id="donate" class="col-md-4 col-sm-6">
+      <h4>{{ i18n "donateTitle" }}</h4>
+        <a href="{{ .LanguagePrefix }}/give" class="btn btn-small btn-template-main">{{ i18n "donateNow" }}</a>
         <hr class="hidden-md hidden-lg hidden-sm">
     </div> <!-- /.col-md-4 -->
     {{ end }}
@@ -50,22 +49,22 @@
 <div id="post-footer">
   <div class="container">
     <div class="col-md-12 text-center">
-    {{ if isset .Site.Params "privacy" }}
+    {{ if .Site.Params.privacy.enable }}
       <span id="privacy" class="post-footer-item">
         <a href="{{ .LanguagePrefix }}/privacy" class="">{{ i18n "privacyTitle" }}</a>
       </span>
     {{ end }}
-    {{ if isset .Site.Params "cookies" }}
+    {{ if .Site.Params.cookies.enable }}
       <span id="cookies" class="post-footer-item">
         <a href="{{ .LanguagePrefix }}/cookies" class="">{{ i18n "cookiesTitle" }}</a>
       </span>
     {{ end }}
-    {{ if isset .Site.Params "license" }}
+    {{ if .Site.Params.license.enable }}
       <span id="license" class="post-footer-item">
         <a href="{{ .LanguagePrefix }}/license" class="">{{ i18n "licenseTitle" }}</a>
       </span>
     {{ end }}
-    {{ if isset .Site.Params "donate" }}
+    {{ if .Site.Params.donate.enable }}
       <span id="donate" class="post-footer-item">
         <a href="{{ .LanguagePrefix }}/give" class="">{{ i18n "donateTitle" }}</a>
       </span>
