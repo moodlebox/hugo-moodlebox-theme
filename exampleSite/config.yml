@@ -13,6 +13,9 @@ defaultContentLanguageInSubdir: true
 # Allow taxonomy term with special characters
 preserveTaxonomyNames: true
 
+# Footnote return links not language dependent
+footnoteReturnLinkContents: ↩
+
 languages:
   en:
     languageName: English
