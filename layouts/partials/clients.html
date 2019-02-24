@@ -14,7 +14,7 @@
         </p>
 
         <ul class="owl-carousel customers">
-          {{ range . }}
+          {{ range sort . "weight" }}
           <li class="item" title="{{ .name }}">
             {{ if .url }}
               <a href="{{ .url }}" target="_blank">
