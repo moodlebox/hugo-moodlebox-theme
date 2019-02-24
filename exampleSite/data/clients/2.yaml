@@ -1,3 +1,4 @@
 name: "Customer 2"
 image: "img/clients/customer-2.png"
 url: "http://example.com/"
+weight: 2
