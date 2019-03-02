@@ -3628,7 +3628,7 @@ dd {
 
 code {
   padding: 2px 4px;
-  font-size: 13px;
+  font-size: 0.9375em;
   color: #333;
   background-color: #f0f0f0;
   border-radius: 4px;
