@@ -3999,3 +3999,24 @@ input[type="reset"]:hover, input[type="submit"]:hover, input[type="submit"]:hove
   background: white;
   /* opacity: 0.8; */
 }
+
+/* Gallery. */
+.gallery {
+  margin: 0.5em -4px 1.5em -4px;
+  font-size: 0;
+}
+
+a[data-fancybox] {
+  text-decoration: none;
+}
+
+a[data-fancybox] img {
+  /* height: 250px; */
+  width: 250px;
+  max-width: inherit;
+  display: inherit;
+  margin: 0;
+  padding: 4px;
+  box-shadow: none;
+  vertical-align: inherit;
+}

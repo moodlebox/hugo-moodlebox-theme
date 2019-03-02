@@ -28,6 +28,9 @@
   {{ partial "seo-metadata.html" . }}
   <!-- Bootstrap and Font Awesome css -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet" crossorigin="anonymous">
+  {{ if .HasShortcode "gallery" }}
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" rel="stylesheet" crossorigin="anonymous" />
+  {{ end }}
   <!-- Custom fonts and styles for this template -->
   {{ if .Site.IsServer }}
     {{ $cssOpts := (dict "enableSourceMap" true ) }}

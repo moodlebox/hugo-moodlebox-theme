@@ -1,41 +1,42 @@
-<!--
-Put this file in /layouts/shortcodes/gallery.html
-Documentation and licence at https://github.com/liwenyip/hugo-easy-gallery/
--->
-<!-- count how many times we've called this shortcode; load the css if it's the first time -->
-{{- if not ($.Page.Scratch.Get "figurecount") }}<link rel="stylesheet" href="/css/hugo-easy-gallery.min.css" />{{ end }}
-{{- $.Page.Scratch.Add "figurecount" 1 }}
-{{ $baseURL := .Site.BaseURL }}
-<div class="gallery caption-position-{{ with .Get "caption-position" | default "bottom" }}{{.}}{{end}} caption-effect-{{ with .Get "caption-effect" | default "slide" }}{{.}}{{end}} hover-effect-{{ with .Get "hover-effect" | default "zoom" }}{{.}}{{end}} {{ if ne (.Get "hover-transition") "none" }}hover-transition{{end}}" itemscope itemtype="http://schema.org/ImageGallery">
-	{{- with (.Get "dir") -}}
-		<!-- If a directory was specified, generate figures for all of the images in the directory -->
-		{{- $files := readDir (print "/static/" .) }}
-		{{- range $files -}}
-			<!-- skip files that aren't images, or that inlcude the thumb suffix in their name -->
-			{{- $thumbext := $.Get "thumb" | default "-thumb" }}
-			{{- $isthumb := .Name | findRE ($thumbext | printf "%s\\.") }}<!-- is the current file a thumbnail image? -->
-			{{- $isimg := lower .Name | findRE "\\.(gif|jpg|jpeg|tiff|png|bmp)" }}<!-- is the current file an image? -->
-			{{- if and $isimg (not $isthumb) }}
-				{{- $caption :=  .Name | replaceRE "\\..*" "" | humanize }}<!-- humanized filename without extension -->
-				{{- $linkURL := print $baseURL ($.Get "dir") "/" .Name | absURL | replaceRE "[^/]$" "${0}/" }}<!-- absolute URL to hi-res image -->
-				{{- $thumb := .Name | replaceRE "(\\.)" ($thumbext | printf "%s.") }}<!-- filename of thumbnail image -->
-				{{- $thumbexists := where $files "Name" $thumb }}<!-- does a thumbnail image exist? -->
-				{{- $thumbURL := print $baseURL ($.Get "dir") "/" $thumb | absURL | replaceRE "[^/]$" "${0}/" }}<!-- absolute URL to thumbnail image -->
-				<div class="box">
-				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-				    <div class="img" style="background-image: url('{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}');" >
-				      <img itemprop="thumbnail" src="{{ if $thumbexists }}{{ $thumbURL }}{{ else }}{{ $linkURL }}{{ end }}" alt="{{ $caption }}" /><!-- <img> hidden if in .gallery -->
-				    </div>
-			      <figcaption>
-		          <p>{{ $caption }}</p>
-			      </figcaption>
-				    <a href="{{ $linkURL }}" itemprop="contentUrl"></a><!-- put <a> last so it is stacked on top -->
-				  </figure>
-				</div>
-			{{- end }}
-		{{- end }}
-	{{- else -}}
-		<!-- If no directory was specified, include any figure shortcodes called within the gallery -->
-	  {{ .Inner }}
-	{{- end }}
+{{ $album := "gallery" }}
+{{ with .Get "album" }}{{ $album = . }}{{ end }}
+<div class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+  {{/* Attempt to automatically load gallery images from page bundle */}}
+  {{ $images := ($.Page.Resources.ByType "image").Match (printf "%s/*" $album) }}
+  {{ with $images }}
+    {{ range $images }}
+      {{/* Check if the user set a caption for this image */}}
+      {{ $filename := .Name }}
+      {{ $caption := "" }}
+      {{ if $.Page.Params.gallery_item }}
+      {{ range (where $.Page.Params.gallery_item "album" $album) }}
+        {{if eq (printf "%s/%s" $album .image) $filename}}
+          {{ with .caption }}
+            {{ $caption = . }}
+          {{end}}
+        {{end}}
+      {{ end }}
+    {{ end }}
+    <a data-fancybox="gallery-{{ $album }}" href="{{ .RelPermalink }}" {{ with $caption }}data-caption="{{ . }}"{{ end }}>
+    <img src="{{ .RelPermalink }}" alt="">
+    </a>
+  {{ end }}
+
+  {{else}}
+    {{/* Load gallery images from the `static/img/` media library or internet */}}
+
+    {{ range (where $.Page.Params.gallery_item "album" $album) }}
+      {{/* Set image path. */}}
+      {{ $.Scratch.Set "src" .image }}
+      {{ if gt (len .image) 4 }}
+        {{ if ne "http" (slicestr .image 0 4) }}
+          {{ $.Scratch.Set "src" (printf "img/%s" .image | relURL) }}
+        {{ end }}
+      {{ end }}
+      <a data-fancybox="gallery{{ with .album }}-{{.}}{{ end }}" {{ with .caption }}data-caption="{{.}}"{{ end }} href="{{$.Scratch.Get "src"}}">
+        <img src="{{$.Scratch.Get "src"}}" alt="">
+      </a>
+    {{ end }}
+  {{ end }}
 </div>
