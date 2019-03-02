@@ -11,9 +11,7 @@ categories:
   - Usage
 ---
 
-{{% notice warning "Use Relative Links" %}}
 Wenn Sie ein Thema mit der Absicht erstellen, es mit der Community zu teilen, verwenden Sie relative URLs, da Benutzer Ihres Themas möglicherweise nicht im Stammverzeichnis ihrer Website veröffentlichen.
-{{% /notice %}}
 
 Hugo can initialize a new blank theme directory within your existing `themes` using the `hugo new` command:
 
@@ -25,10 +23,7 @@ hugo new theme [name]
 
 A theme consists of templates and static assets such as javascript and css files. Themes can also provide [archetypes][], which are archetypal content types used by the `hugo new` command to scaffold new content files with preconfigured front matter.
 
-
-{{% notice note "Use the Hugo Generator Tag" %}}
 The [`.Hugo.Generator`](/variables/hugo/) tag is included in all themes featured in the [Hugo Themes Showcase](http://themes.gohugo.io). We ask that you include the generator tag in all sites and themes you create with Hugo to help the core team track Hugo's usage and popularity.
-{{% /notice %}}
 
 ## Layouts
 

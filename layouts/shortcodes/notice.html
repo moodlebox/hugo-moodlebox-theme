@@ -1,6 +1,0 @@
-{{- $noticeType := .Get 0 -}}
-{{/* Available notice types: warning, info, note, tip */}}
-<div class="notice {{ $noticeType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
-<p class="first notice-title">{{ i18n $noticeType }}</p>
-{{- .Inner -}}
-</div>
