@@ -3968,3 +3968,23 @@ a[data-fancybox] img {
   box-shadow: none;
   vertical-align: inherit;
 }
+
+/* Lists */
+ul {
+  list-style: none;
+  margin-left: 1.5em;
+  padding-left: 0;
+  text-indent: -1.5em;
+}
+
+ol {
+  margin-left: 1.5em;
+  padding-left: .5em;
+}
+
+ul li:before {
+  content: "–";
+  display: block;
+  float: left;
+  width: 1.5em
+}
