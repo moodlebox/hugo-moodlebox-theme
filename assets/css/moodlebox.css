@@ -3970,19 +3970,19 @@ a[data-fancybox] img {
 }
 
 /* Lists */
-ul {
+#content ul {
   list-style: none;
   margin-left: 1.5em;
   padding-left: 0;
   text-indent: -1.5em;
 }
 
-ol {
+#content ol {
   margin-left: 1.5em;
   padding-left: .5em;
 }
 
-ul li:before {
+#content ul li:before {
   content: "–";
   display: block;
   float: left;
