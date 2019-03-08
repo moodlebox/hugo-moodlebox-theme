@@ -3988,3 +3988,9 @@ a[data-fancybox] img {
   float: left;
   width: 1.5em
 }
+
+/* Link in homepage features block */
+#features a, #features a:hover {
+  text-decoration: none;
+  color: #2a2a2a;
+}
