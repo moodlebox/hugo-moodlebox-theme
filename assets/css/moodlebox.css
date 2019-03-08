@@ -3647,7 +3647,7 @@ code {
   display: flex;
 }
 
-section.news {
+section#news {
   position: relative;
   margin-top: -40px;
   margin-bottom: 10px;
@@ -3655,12 +3655,13 @@ section.news {
   border-bottom: solid 1px #999;
 }
 
-.news div[class*="col-md-"] {
+/* News row on homepage */
+#news div[class*="col-md-"] {
   padding-left: 0;
   padding-right: 0;
 }
 
-.news a.news-item {
+#news a.news-item {
   padding: 15px 22.5px;
   height: 100%;
   display: inline-block;
@@ -3671,17 +3672,17 @@ section.news {
   /* overflow: hidden; */
 }
 
-.news a.news-item {
+#news a.news-item {
   text-decoration: none;
   color: #2a2a2a;
 }
 
-.news a.news-item:hover {
+#news a.news-item:hover {
   background: #da4d4d;
   color: #fff;
 }
 
-.news-item .news-date {
+#news .news-item .news-date {
   display: block;
   font-weight: 700;
 }
