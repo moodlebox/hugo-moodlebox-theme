@@ -10,7 +10,7 @@
   <div class="panel-body">
     <ul class="nav nav-pills nav-stacked">
     {{- range $name, $items := .Site.Taxonomies.categories }}
-    <li><a href="{{ $.Site.BaseURL }}{{ $.LanguagePrefix }}/categories/{{ $name | urlize | lower }}">{{ $name }} ({{ len $items }})</a></li>
+    <li><a href="{{ $.Site.BaseURL }}{{ $.Site.LanguagePrefix }}/categories/{{ $name | urlize | lower }}">{{ $name }} ({{ len $items }})</a></li>
     {{- end }}
     </ul>
   </div>

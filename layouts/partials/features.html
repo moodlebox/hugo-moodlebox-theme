@@ -9,7 +9,7 @@
       <div class="row">
     {{ end }}
         <div class="col-md-3">
-          {{ with $.Site.GetPage (printf "%s" $element.link) }}<a href="{{ .URL }}">{{ end }}
+          {{ with $.Site.GetPage (printf "%s" $element.link) }}<a href="{{ .RelPermalink }}">{{ end }}
           <div class="box-simple">
             <div class="icon">
               <span class="fa-stack fa-4x">

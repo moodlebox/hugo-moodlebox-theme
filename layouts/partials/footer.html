@@ -40,7 +40,7 @@
       {{ if .Site.Params.donate.enable }}
       <div id="donate" class="col-md-4 col-sm-6">
         <h4>{{ i18n "donateTitle" }}</h4>
-          <a href="{{ .LanguagePrefix }}/give" class="btn btn-small btn-template-main">{{ i18n "donateNow" }}</a>
+          <a href="{{ .Site.LanguagePrefix }}/give" class="btn btn-small btn-template-main">{{ i18n "donateNow" }}</a>
           <hr class="hidden-md hidden-lg hidden-sm">
       </div> <!-- /.col-md-4 -->
       {{ end }}
@@ -55,27 +55,27 @@
       <div class="col-md-12 text-center">
       {{ if .Site.Params.privacy.enable }}
         <span id="privacy" class="post-footer-item">
-          <a href="{{ .LanguagePrefix }}/privacy" class="">{{ i18n "privacyTitle" }}</a>
+          <a href="{{ .Site.LanguagePrefix }}/privacy" class="">{{ i18n "privacyTitle" }}</a>
         </span>
       {{ end }}
       {{ if .Site.Params.cookies.enable }}
         <span id="cookies" class="post-footer-item">
-          <a href="{{ .LanguagePrefix }}/cookies" class="">{{ i18n "cookiesTitle" }}</a>
+          <a href="{{ .Site.LanguagePrefix }}/cookies" class="">{{ i18n "cookiesTitle" }}</a>
         </span>
       {{ end }}
       {{ if .Site.Params.license.enable }}
         <span id="license" class="post-footer-item">
-          <a href="{{ .LanguagePrefix }}/license" class="">{{ i18n "licenseTitle" }}</a>
+          <a href="{{ .Site.LanguagePrefix }}/license" class="">{{ i18n "licenseTitle" }}</a>
         </span>
       {{ end }}
       {{ if .Site.Params.donate.enable }}
         <span id="donate" class="post-footer-item">
-          <a href="{{ .LanguagePrefix }}/give" class="">{{ i18n "donateTitle" }}</a>
+          <a href="{{ .Site.LanguagePrefix }}/give" class="">{{ i18n "donateTitle" }}</a>
         </span>
       {{ end }}
       {{ if isset .Site.Params "address" }}
         <span id="address" class="post-footer-item">
-          <a href="{{ .LanguagePrefix }}/contact" class="">{{ i18n "contactTitle" }}</a>
+          <a href="{{ .Site.LanguagePrefix }}/contact" class="">{{ i18n "contactTitle" }}</a>
         </span>
       {{ end }}
       </div>
