@@ -13,7 +13,7 @@
 {{ $image_caption := .Get "caption" }}
 {{ $image_rel := .Get "rel" }}
 {{ $image_target := .Get "target" }}
-<div class="box fancy-figure caption-position-bottom caption-effect-appear">
+<div class="image-box fancy-figure caption-position-bottom caption-effect-appear">
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }} itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 {{/* Attempt to automatically load image from page bundle */}}
 {{ $img_url := (index (($.Page.Resources.ByType "image").Match (printf "%s*" $image_src)) 0).Permalink }}
