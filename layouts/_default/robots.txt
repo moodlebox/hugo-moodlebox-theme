@@ -1,6 +1,6 @@
 User-agent: *
 
-{{- range where .Data.Pages "Params.robotsdisallow" true }}
+{{- range where .Site.RegularPages "Params.robotsdisallow" true }}
 Disallow: {{ .RelPermalink }}
 {{ end -}}
 
