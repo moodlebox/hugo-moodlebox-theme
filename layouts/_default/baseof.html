@@ -24,7 +24,6 @@
   <meta name="keywords" content="{{ delimit .Site.Params.DefaultKeywords ", " }}">
   {{- end }}
   <meta name="description" content="{{ partial "description" . }}">
-  <link rel="alternate" href="{{ "/index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
   {{ partial "hreflang.html" . }}
   {{ partial "seo-metadata.html" . }}
   {{ block "stylesheets" . }}{{ partial "stylesheets.html" . }}{{ end }}
@@ -49,6 +48,8 @@
       <script src="{{ $lunrLangJS.Permalink }}" integrity="{{ $lunrLangJS.Data.Integrity }}"></script>
     {{ end -}}
   {{ end }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="alternate" href="{{ "/index.xml" | absLangURL }}" type="application/rss+xml" title="{{ .Site.Title }}">
   <!-- Favicon and various touch icons-->
   <link rel="shortcut icon" href="{{ "img/favicon.ico" | absURL }}" type="image/x-icon" />
   <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | absURL }}" sizes="180x180">
