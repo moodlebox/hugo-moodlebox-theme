@@ -1,0 +1,45 @@
+{{ $video_src := .Get "src" }}
+{{ $video_mp4 := "" }}
+{{ $video_webm := "" }}
+{{ $video_ogg := "" }}
+{{ $video_dl := "" }}
+{{ $width := "100%" }}
+
+{{/* Find all files with filename (without suffix) matching "src" parameter */}}
+{{ $video_files := (.Page.Resources.Match (printf "%s*" $video_src)) }}
+
+{{/* Find first image file with filename (without suffix) matching "src" parameter */}}
+{{ $poster := ((.Page.Resources.ByType "image").GetMatch (printf "%s*" $video_src)) }}
+
+{{/* Find in page bundle all valid video files with matching name */}}
+{{ with $video_files }}
+  {{ range . }}
+    {{ if (in .MediaType.Suffixes "mp4") }}
+      {{ $video_mp4 = . }}
+      {{ $video_dl = . }}
+    {{ end }}
+    {{ if (in .MediaType.Suffixes "webm") }}
+      {{ $video_webm = . }}
+      {{ $video_dl = . }}
+    {{ end }}
+    {{ if (in .MediaType.Suffixes "ogv") }}
+      {{ $video_ogg = . }}
+      {{ $video_dl = . }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ errorf "No valid movie file with filename %q found." $video_src }}
+{{ end }}
+
+<video controls preload="auto" width="{{ or (.Get "width") $width }}" {{ with $poster }}poster="{{ .RelPermalink }}"{{ end }}class="video">
+  {{ with $video_mp4 }}
+  <source src="{{ $video_mp4.RelPermalink }}" type="video/mp4" }}>
+  {{ end }}
+  {{ with $video_webm }}
+  <source src="{{ $video_webm.RelPermalink }}" type="video/webm" }}>
+  {{ end }}
+  {{ with $video_ogg }}
+  <source src="{{ $video_ogg.RelPermalink }}" type="video/ogg" }}>
+  {{ end }}
+  <p>Sorry, your browser doesn't support embedded videos, but don't worry, you can <a href="{{ with $video_dl }}{{ $video_dl.RelPermalink }}{{ end }}">download it</a> and watch it with your favorite video player!</p>
+</video>
