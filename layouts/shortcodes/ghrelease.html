@@ -25,7 +25,7 @@
   {{- $url := "data/ghrelease.json" -}}
   {{- $release := getJSON $url -}}
 
-  {{- range $release.assets -}}
+  {{- range first 1 $release.assets -}}
     {{ $p := . }}
       {{- if eq $data "file_name" -}}
         {{- $p.name -}}

@@ -24,7 +24,7 @@
   {{- $url := (printf "https://api.github.com/repos/%s/%s/releases/%s" $user $repo $tag) -}}
   {{- $release := getJSON $url -}}
 
-  {{- range $release.assets -}}
+  {{- range first 1 $release.assets -}}
     {{ $p := . }}
       {{- if eq $data "file_name" -}}
         {{- $p.name -}}
