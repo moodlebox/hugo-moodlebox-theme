@@ -4044,8 +4044,8 @@ summary {
   padding: 1rem 2em 1rem 0;
   display: block;
   position: relative;
-  font-size: 1.33em;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
   cursor: pointer;
 }
 summary::before, summary::after {
