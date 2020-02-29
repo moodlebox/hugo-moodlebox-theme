@@ -4028,20 +4028,18 @@ a[data-fancybox] img {
 /* faq */
 details {
   margin: 1rem auto;
-  padding: 0 1rem;
-  border: 1px solid #2a2a2a;
-  border-radius: 6px;
-  background-color: #f2f2f2;
+  padding: 0;
+  border-bottom: 2px solid #da4d4d;
   color: #2a2a2a;
-  -webkit-transition: background-color .15s;
-  transition: background-color .15s;
 }
 details > :last-child {
   margin-bottom: 1rem;
 }
+/*
 details[open] {
   background-color: #fff;
 }
+ */
 summary {
   padding: 1rem 2em 1rem 0;
   display: block;
@@ -4057,7 +4055,8 @@ summary::before, summary::after {
   top: 50%;
   right: 0;
   content: '';
-  background-color: currentColor;
+  /* background-color: currentColor; */
+  background-color: #da4d4d;
   text-align: right;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -4076,4 +4075,14 @@ summary::after {
 }
 summary::-webkit-details-marker {
   display: none;
+}
+.faq h3 {
+  color: #da4d4d;
+  margin-top: 0;
+}
+.faq-group {
+  margin-top: 4rem;
+}
+.faq-group:first-child {
+  margin-top: 0;
 }
