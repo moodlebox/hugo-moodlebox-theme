@@ -19,7 +19,7 @@
                  <details>
                    <summary>{{ .question }}</summary>
                    <div class="faq-content">
-                     {{ .answer }}
+                     {{ .answer | markdownify }}
                    </div>
                  </details>
                {{ end }}
