@@ -4027,7 +4027,7 @@ a[data-fancybox] img {
 
 /* faq */
 details {
-  margin: 1rem auto;
+  margin: .5rem auto;
   padding: 0;
   border-bottom: 2px solid #da4d4d;
   color: #2a2a2a;
@@ -4035,11 +4035,6 @@ details {
 details > :last-child {
   margin-bottom: 1rem;
 }
-/*
-details[open] {
-  background-color: #fff;
-}
- */
 summary {
   padding: 1rem 2em 1rem 0;
   display: block;
@@ -4079,6 +4074,7 @@ summary::-webkit-details-marker {
 .faq h3 {
   color: #da4d4d;
   margin-top: 0;
+  margin-bottom: 0;
 }
 .faq-group {
   margin-top: 4rem;

@@ -1,0 +1,42 @@
+{{ define "main" }}
+  <header>
+    {{ partial "nav.html" . }}
+  </header>
+  {{ partial "breadcrumbs.html" . }}
+  <div id="content">
+    <div class="container">
+      <div class="row">
+        {{ with .Content }}
+          <div id="faq-intro-container" class="col-md-9">{{ . }}</div>
+        {{ end }}
+        <div id="faq-container" class="col-md-9">
+          <section class="faq">
+            {{ with index .Site.Data.faq .Site.Language.Lang }}
+            {{ range . }}
+             <div class="faq-group" id="faq-group-{{ .id }}">
+               <h3 id="{{ .id }}">{{ .name }}</h3>
+               {{ range .items }}
+                 <details>
+                   <summary>{{ .question }}</summary>
+                   <div class="faq-content">
+                     {{ .answer }}
+                   </div>
+                 </details>
+               {{ end }}
+            </div>
+            {{ end }}
+            {{ end }}
+          </section>
+        </div>
+        <div class="col-md-3">
+          {{ partial "widgets/search.html" . }}
+        </div> <!-- col-md-3 -->
+        <div class="col-md-3">
+          {{ partial "widgets/recentnews.html" . }}
+        </div> <!-- col-md-3 -->
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+  </div> <!-- /#content -->
+{{ end }}
+{{ define "footerfiles" }}
+{{ end }}
