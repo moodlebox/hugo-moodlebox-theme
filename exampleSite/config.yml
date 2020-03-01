@@ -20,7 +20,8 @@ languages:
   en:
     languageName: English
     title: MoodleBox
-    description: A cool theme for Hugo
+    slogan: A cool theme for Hugo
+    description: This is a cool theme for Hugo, used for the MoodleBox website.
     about: MoodleBox is a cool theme for Hugo by [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 onwards
     weight: 1
@@ -84,7 +85,8 @@ languages:
   fr:
     languageName: Français
     title: MoodleBox
-    description: Un thème sympa pour Hugo
+    slogan: Un thème sympa pour Hugo
+    description: Ce thème est thème sympa pour Hugo, utilisé pour le site web de MoodleBox.
     about: MoodleBox est thème pour Hugo réalisé par [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 et suivantes
     contentDir: content/fr
@@ -148,7 +150,8 @@ languages:
   de:
     languageName: Deutsch
     title: MoodleBox
-    description: Ein cooles Design für Hugo
+    slogan: Ein cooles Design für Hugo
+    description: Dies ist ein cooles Design für Hugo, das für die MoodleBox-Website verwendet wird.
     about: MoodleBox ist ein Design für Hugo realisiert von [Nicolas Martignoni](https://twitter.com/nmartignoni)
     copyright: Copyright © 2018 und später
     contentDir: content/de
@@ -231,7 +234,8 @@ menu:
 params:
   author: Your Name
   address: ''
-  defaultDescription: A cool theme for Hugo
+  defaultSlogan: A cool theme for Hugo
+  defaultDescription: This is a cool theme for Hugo, used for the MoodleBox website.
   defaultKeywords:
   - Hugo
   - Hugo theme
