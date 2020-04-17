@@ -108,6 +108,8 @@
   translation: "Faire un don"
 - id: cookiesTitle
   translation: "Cookies"
+- id: faqTitle
+  translation: "Questions fréquentes"
 
 - id: January
   translation: "janvier"

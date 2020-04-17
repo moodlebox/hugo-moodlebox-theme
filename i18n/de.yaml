@@ -108,6 +108,8 @@
   translation: "Spenden"
 - id: cookiesTitle
   translation: "Cookies"
+- id: faqTitle
+  translation: "Frequently asked questions"
 
 - id: January
   translation: "Januar"
